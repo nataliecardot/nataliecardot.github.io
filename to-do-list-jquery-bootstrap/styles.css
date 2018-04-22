@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background: #642B73;
+  background: -webkit-linear-gradient(to right, #C6426E, #642B73);
+  background: linear-gradient(to right, #C6426E, #642B73);
+}
+
+h1 {
+  background: #642B73;
+  color: white;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.container {
+  margin: 100px auto;
+  background: #f7f7f7;
+  width: 360px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Makes UL block-level flex container. Needed for completed items to move to end of list (see .completed ruleset) */
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  background: white;
+  /* Distance from top of the first line of text to the top of second */
+  line-height: 35px;
+  color: #666;
+  padding: 0 5px 0px 15px;
+  position: relative;
+  cursor: default; /* Prevents default text cursor */
+}
+
+/* Sets color of even li elements */
+li:nth-child(even) {
+  background: #f7f7f7;
+}
+
+input {
+  font-size: 1em; /* Text is smaller than li text without this */
+  background: #f7f7f7;
+  width: 100%;
+  height: 35px;
+  /* Distance from top of first line of text to top of second */
+  line-height: 35px;
+  /* Order: top, right, bottom, left */
+  padding: 13px 13px 13px 13px;
+  /* Includes padding and border in element's total width and height */
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #C6426E;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+/* Pseudoselector that sets input placeholder text color to match that of li text */
+input::placeholder {
+  color: #666;
+}
+
+/* Sets appearance of input box boundaries when user clicks inside */
+input:focus {
+  background: white;
+  border: 3px solid #642B73;
+  outline: none;
+}
+
+.completed {
+  color: grey;
+  text-decoration: line-through;
+  /* Specifies order of item in flex container (see ul ruleset). Works because other items have order set to 0 by default */
+  order: 1;
+}
+
+/* Styles '+' sign. Top property makes element's top edge move above/below its normal position (in this case, lower) */
+.fa-plus {
+  float: right;
+  position: relative;
+  top: 4px;
+  cursor: pointer;
+}
+
+/* Styles Bootstrap trash can icon. Note default is 0px wide (which hovering changes in next CSS ruleset) */
+span {
+  background: #e74c3c;
+  height: 35px;
+  width: 0;
+  opacity: 0;
+  margin-right: 0;
+  position: absolute;
+  /* Sets right edge to right edge of nearest positioned ancestor, li element */
+  right: 0;
+  text-align: center;
+  color: white;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+/* Sets span content (Bootstrap trash can icon) to be 35px wide and fully opaque upon hover over list item */
+li:hover span {
+  width: 35px; /* Applies to icon background */
+  opacity: 1.0;
+}

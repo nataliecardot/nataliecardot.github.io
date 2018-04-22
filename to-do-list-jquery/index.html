@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  	<title>To-Do List</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/designs.js"></script>
+	</head>
+	<body>
+    <div class="container">
+  		<h2>To Do</h2>
+  		<form name="listForm">
+  			<input type="text" name="listItem" placeholder="Add new">
+        <button type="button" class="button">+</button>
+      </form>
+  		<br><br>
+      <!-- Class 'sortable' enables sorting with jQuery UI method sortable() -->
+  		<ul class="sortable">
+        <li>Work on projects for one hour</li>
+        <li>Go for a walk</li>
+        <li>Meditate</li>
+        <li>Stretch</li>
+      </ul>
+    </div>
+	</body>
+</html>
