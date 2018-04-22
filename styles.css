@@ -1,0 +1,179 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.7em;
+}
+
+h2, h5 {
+  text-transform: uppercase;
+  /* Shorthand: top, horizontal (left and right), bottom. Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
+  margin: 0 0 1em;
+}
+
+/* Descendant selector matches all elements that are descendants of a specified element (in this case p descendants of class "about") */
+.about p {
+  text-align: left;
+}
+
+.contact p {
+  /* Adds extra space before contact form (default margin-bottom is 1rem [root element em]) */
+  margin-bottom: 2em;
+}
+
+.card-text {
+  font-size: 0.8em;
+}
+
+.hero-image {
+  background-image: url(https://image.ibb.co/fzz87S/laptop_reversed.jpg);
+  /* Sets height to full height (100%) of viewport */
+  height: 100vh;
+  /* Ensures background image spans full width of viewport */
+  background-size: cover;
+  /* Aligns image to center of viewport */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Enables flex layout */
+  display: flex;
+  /* Vertically aligns (align-items defines how the browser distributes space between and around flex items along cross-axis of container; works like justify-content but in the perpendicular direction) */
+  align-items: center;
+}
+
+.hero-text {
+  /* Horizontally centers hero text */
+  margin: 0 auto;
+}
+
+.about, .contact {
+  background-color: WhiteSmoke;
+}
+
+.about {
+  /* Adds consistent spacing between content of each row and row's border/edge of viewport */
+  padding: 3em 7em;
+}
+
+.portfolio {
+  background-color: #e6e6e6;
+}
+
+.portfolio-item {
+  margin-bottom: 2em;
+}
+
+.portfolio {
+  /* Since class "portfolio-item" has bottom margin of 2em, decreasing this section's bottom margin by that amount */
+  padding: 3em 7em 1em 7em;
+}
+
+.contact {
+  /* Setting right and left padding to 0 so it doesn't decrease width of contact form inputs */
+  padding: 3em 0em;
+}
+
+.footer {
+  padding: 2em;
+}
+
+.footer-text {
+  /* Matches color of nav links */
+  color: rgba(255, 255, 255, .5);
+  padding-bottom: 0.5em;
+}
+
+/* Applies to Font Awesome social icons */
+.fab {
+  margin: 0 0.5em;
+  color: white;
+}
+
+.fab:hover {
+  /* Matches CodePen links */
+	color: #17a2b8;
+}
+
+/* Applies to all inputs as a block */
+form {
+  width: 90%;
+  /* Centers */
+  margin: 0 auto;
+}
+
+/* Applies to inputs */
+.form-control {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #888;
+  border-radius: 0.2em;
+  /* Order: top/bottom, right/left. Right/left padding adds space between text and border of input (without it, it touches the left edge) */
+  padding: 10px 0.75em;
+}
+
+/* Applies to message box in form. Note this class is applied to same input as form-control (which is applied to every input), but this ruleset overrides form-control since more specific */
+.message-box {
+  margin-top: 1.5em;
+  /* Disables default textarea resizing handles */
+  resize: none;
+  height: 6em;
+}
+
+.email {
+  margin-top: 1.5em;
+}
+
+input[type=text], input[type=email], .message-box {
+  /* matches row background color for all inputs */
+  background-color: WhiteSmoke;
+}
+
+/* Applies to button within top hero image */
+.btn-contact {
+  /* Combines with 1em bottom margin set for h5 elements for total of 1.5 em between button and text "web developer" */
+  margin-top: 0.5em;
+}
+
+/* Moves contact form button (from bottom center) to bottom right of form */
+.form-btn {
+  /* Shorthand: top, horizontal (left and right), bottom */
+  margin: 2em auto 0;
+  text-align: right;
+  width: 50%;
+}
+
+/* Special styling for screens up to 800px wide */
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  .about {
+    /* Adds consistent spacing between content of each row and row's border/edge of viewport */
+    padding: 2em 2em;
+  }
+
+  .portfolio {
+    /* Since class "portfolio-item" has bottom margin of 2em, decreasing this section's bottom margin by that amount */
+    padding: 2em 2em 0 2em;
+  }
+
+  .contact {
+    padding: 2em 0;
+  }
+
+  .bt-btn {
+    width: 50%;
+  }
+
+  form-control, form  {
+    /* Set to 90% on screens larger than 800px */
+    width: 100%;
+  }
+}
