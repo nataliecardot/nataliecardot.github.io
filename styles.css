@@ -37,6 +37,8 @@ h2, h5 {
   /* Aligns image to center of viewport */
   background-position: center;
   background-repeat: no-repeat;
+  /* For parallax scrolling effect */
+  background-attachment: fixed;
   /* Enables flex layout */
   display: flex;
   /* Vertically aligns (align-items defines how the browser distributes space between and around flex items along cross-axis of container; works like justify-content but in the perpendicular direction) */
