@@ -3,27 +3,26 @@ body {
   text-align: center;
 }
 
+/* Navbar logo */
+.navbar-brand img {
+  height: 27px;
+  width: auto;
+}
+
+/* Applies to full name in hero image */
 h1 {
   font-family: "Playfair Display", serif;
   margin-bottom: 0.7em;
 }
 
+/* Applies to hero image subtext, page section titles */
 h2, h5 {
   text-transform: uppercase;
   /* Shorthand: top, horizontal (left and right), bottom. Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
   margin: 0 0 1em;
 }
 
-/* Descendant selector matches all elements that are descendants of a specified element (in this case p descendants of class "about") */
-.about p {
-  text-align: left;
-}
-
-.contact p {
-  /* Adds extra space before contact form (default margin-bottom is 1rem [root element em]) */
-  margin-bottom: 2em;
-}
-
+/* Applies to text in project descriptions */
 .card-text {
   font-size: 0.8em;
 }
@@ -50,6 +49,12 @@ h2, h5 {
   margin: 0 auto;
 }
 
+/* Applies to button within top hero image */
+.hero-contact {
+  /* Combines with 1em bottom margin set for h5 elements for total of 1.5 em between button and text "web developer" */
+  margin-top: 0.5em;
+}
+
 .about, .contact {
   background-color: WhiteSmoke;
 }
@@ -57,6 +62,11 @@ h2, h5 {
 .about {
   /* Adds consistent spacing between content of each row and row's border/edge of viewport */
   padding: 3em 7em;
+}
+
+/* Descendant selector matches all elements that are descendants of a specified element (in this case p descendants of class "about") */
+.about p {
+  text-align: left;
 }
 
 .portfolio {
@@ -72,9 +82,10 @@ h2, h5 {
   padding: 3em 7em 1em 7em;
 }
 
+/* Contact section */
 .contact {
   /* Setting right and left padding to 0 so it doesn't decrease width of contact form inputs */
-  padding: 3em 0em;
+  padding: 3em 0;
 }
 
 .footer {
@@ -98,15 +109,28 @@ h2, h5 {
 	color: #17a2b8;
 }
 
-/* Applies to all inputs as a block */
-form {
-  width: 90%;
-  /* Centers */
-  margin: 0 auto;
+/* Applies to paragraph in contact section */
+.contact p {
+  /* Adds extra space before contact form (default margin-bottom is 1rem [root element em]) */
+  margin-bottom: 2em;
 }
 
-/* Applies to inputs */
-.form-control {
+/* Applies to message box in form */
+.message-box {
+  margin-top: 1.5em;
+  /* Disables default textarea resizing handles */
+  resize: none;
+  height: 6em;
+}
+
+/* Applies to input box for email */
+.email {
+  margin-top: 1.5em;
+}
+
+input[type=text], input[type=email], .message-box {
+  /* matches row background color for all input boxes */
+  background-color: WhiteSmoke;
   width: 50%;
   margin: 0 auto;
   border: 1px solid #888;
@@ -115,34 +139,11 @@ form {
   padding: 10px 0.75em;
 }
 
-/* Applies to message box in form. Note this class is applied to same input as form-control (which is applied to every input), but this ruleset overrides form-control since more specific */
-.message-box {
-  margin-top: 1.5em;
-  /* Disables default textarea resizing handles */
-  resize: none;
-  height: 6em;
-}
-
-.email {
-  margin-top: 1.5em;
-}
-
-input[type=text], input[type=email], .message-box {
-  /* matches row background color for all inputs */
-  background-color: WhiteSmoke;
-}
-
-/* Applies to button within top hero image */
-.btn-contact {
-  /* Combines with 1em bottom margin set for h5 elements for total of 1.5 em between button and text "web developer" */
-  margin-top: 0.5em;
-}
-
-/* Moves contact form button (from bottom center) to bottom right of form */
 .form-btn {
   /* Shorthand: top, horizontal (left and right), bottom */
   margin: 2em auto 0;
   text-align: right;
+  /* Matches inputs */
   width: 50%;
 }
 
@@ -170,12 +171,7 @@ input[type=text], input[type=email], .message-box {
     padding: 2em 0;
   }
 
-  .bt-btn {
-    width: 50%;
-  }
-
-  form-control, form  {
-    /* Set to 90% on screens larger than 800px */
-    width: 100%;
+  input[type=text], input[type=email], .message-box, .form-btn {
+    width: 80%;
   }
 }
