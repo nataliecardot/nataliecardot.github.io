@@ -60,7 +60,6 @@ h2, h5 {
 }
 
 .about {
-  /* Adds consistent spacing between content of each row and row's border/edge of viewport */
   padding: 3em 7em;
 }
 
@@ -173,5 +172,10 @@ input[type=text], input[type=email], .message-box {
 
   input[type=text], input[type=email], .message-box, .form-btn {
     width: 80%;
+  }
+
+  p {
+    margin-right: 2em;
+    margin-left: 2em;
   }
 }
