@@ -32,11 +32,13 @@
       <a class="navbar-brand" href="#">
         <img src="https://image.ibb.co/fcsAzH/logo_teal_tiny_png.png" alt="Hexagon logo">
       </a>
-      <!-- Toggler/collapsible button. ml-auto moves toggler icon from left to right side (sets left margin to auto) -->
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <!-- Toggler/collapsible button. aria-expanded attribute indicates to screen reader users state of collapsable content -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="my-1 mx-2 close">X</span>
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <!-- collapse plugin explained: https://getbootstrap.com/docs/3.3/javascript/#collapse -->
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <!-- px-3 sets left and right padding to $spacer Sass map variable, which is 1rem (html (root) font-size) -->

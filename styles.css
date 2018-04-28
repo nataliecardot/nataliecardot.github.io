@@ -174,3 +174,14 @@ input[type=text], input[type=email], .message-box {
     width: 80%;
   }
 }
+
+/* Shows "X" in place of navbar hamburger icon when clicked */
+
+/* Reminder: Child selector selects all elements that are immediate children of specified element */
+.navbar-toggler > .close {
+  display: inline;
+}
+
+.navbar-toggler.collapsed > .close, .navbar-toggler:not(.collapsed) > .navbar-toggler-icon {
+  display: none;
+}
