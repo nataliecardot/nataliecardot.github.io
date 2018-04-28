@@ -185,3 +185,14 @@ input[type=text], input[type=email], .message-box {
 .navbar-toggler.collapsed > .close, .navbar-toggler:not(.collapsed) > .navbar-toggler-icon {
   display: none;
 }
+
+/* Removes default hamburger icon border */
+.navbar-toggler {
+  border: none;
+}
+
+/* Changes default color from black to white (which shows up as gray for some reason) and removes default white shadow */
+.close {
+  color: #fff;
+  text-shadow: none;
+}
