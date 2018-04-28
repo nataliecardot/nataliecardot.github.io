@@ -186,9 +186,14 @@ input[type=text], input[type=email], .message-box {
   display: none;
 }
 
-/* Removes default hamburger icon border */
+/* Removes default toggler icon border */
 .navbar-toggler {
   border: none;
+}
+
+/* Removes default orange border around navbar toggler icon when it has been clicked */
+.navbar-toggler:focus {
+  outline: none;
 }
 
 /* Changes default (from Bootstrap 4's SCSS) color from black to white (which shows up as gray for some reason) and removes default white shadow */
