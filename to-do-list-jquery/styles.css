@@ -37,11 +37,11 @@ input:focus {
   border-color: #da4453;
   /* L to R: horizontal offset, vertical offset, blur radius. A in RGBA is alpha parameter, a number between 0.0 (fully transparent) and 1.0 (fully opaque) */
   box-shadow: 0 0 8px rgba(229, 103, 23, 0.6);
-  outline: 0 none;
+  outline: none;
 }
 
 button:focus {
-  outline: 0 none;
+  outline: none;
 }
 
 button.button {
