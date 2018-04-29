@@ -93,7 +93,7 @@ h2, h5 {
 
 .footer-text {
   /* Matches color of nav links */
-  color: rgba(255, 255, 255, .5);
+  color: #c2c2c2;
   padding-bottom: 0.5em;
 }
 
@@ -186,18 +186,34 @@ input[type=text], input[type=email], .message-box {
   display: none;
 }
 
+/* Styles navbar toggler and links (overrides Bootstrap 4 defaults) */
+
 /* Removes default toggler icon border */
 .navbar-toggler {
   border: none;
 }
 
-/* Removes default orange border around navbar toggler icon when it has been clicked */
+/* Removes default orange border that surrounds navbar toggler icon when it has been clicked */
 .navbar-toggler:focus {
   outline: none;
 }
 
-/* Changes default (from Bootstrap 4's SCSS) color from black to white (which shows up as gray for some reason) and removes default white shadow */
+.span.navbar-toggler-icon {
+  opacity: 1;
+}
+
+/* Sets "X" button to light grey, removes shadow and makes fully opaque */
 .close {
-  color: #fff;
+  color: #c2c2c2;
   text-shadow: none;
+  opacity: 1;
+}
+
+.close:hover {
+  color: #c2c2c2;
+  opacity: 1;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #c2c2c2;
 }
