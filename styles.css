@@ -146,8 +146,8 @@ input[type=text], input[type=email], .message-box {
   width: 50%;
 }
 
-/* Special styling for screens up to 700px wide */
-@media only screen and (max-width: 700px) {
+/* Special styling for screens up to 768px wide, inclusive (corresponds to Bootstrap medium breakpoint [typical for tablets], used in navbar [navbar-expand-md]) */
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: 2em;
   }
