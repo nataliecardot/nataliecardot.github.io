@@ -204,7 +204,7 @@ input[type=text], input[type=email], .message-box {
 /* Increases about section right/left padding for extra large screens */
 @media screen and (min-width: 1300px) {
   .about {
-    padding: 3em 12em;
+    padding: 3em 20em;
   }
 }
 
