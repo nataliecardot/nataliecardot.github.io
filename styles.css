@@ -148,6 +148,12 @@ input[type=text], input[type=email], .message-box {
   padding: 10px 0.75em;
 }
 
+/* Remove default box shadow on contact section input boxes, change outline from blue to turquoise to match other page colors */
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #17a2b8;
+}
+
 .form-btn {
   /* Shorthand: top, horizontal (left and right), bottom */
   margin: 2em auto 0;
