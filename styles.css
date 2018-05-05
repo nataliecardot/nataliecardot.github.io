@@ -156,35 +156,6 @@ input[type=text], input[type=email], .message-box {
   width: 50%;
 }
 
-/* Special styling for screens up to 768px wide, inclusive (corresponds to Bootstrap medium breakpoint [typical for tablets], used in navbar [navbar-expand-md]) */
-@media only screen and (max-width: 768px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  h5 {
-    font-size: 1.2em;
-  }
-
-  .about {
-    /* Adds consistent spacing between content of each row and row's border/edge of viewport */
-    padding: 2em 2em;
-  }
-
-  .portfolio {
-    /* Since class "portfolio-item" has bottom margin of 2em, decreasing this section's bottom margin by that amount */
-    padding: 2em 2em 0 2em;
-  }
-
-  .contact {
-    padding: 2em 0;
-  }
-
-  input[type=text], input[type=email], .message-box, .form-btn {
-    width: 80%;
-  }
-}
-
 /* Shows "X" in place of navbar hamburger icon when clicked */
 
 /* Reminder: Child selector selects all elements that are immediate children of specified element */
@@ -226,4 +197,42 @@ input[type=text], input[type=email], .message-box {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #c2c2c2;
+}
+
+/* MEDIA QUERIES */
+
+/* Increases about section right/left padding for extra large screens */
+@media screen and (min-width: 1300px) {
+  .about {
+    padding: 3em 12em;
+  }
+}
+
+/* Special styling for screens up to 768px wide, inclusive (corresponds to Bootstrap medium breakpoint [typical for tablets], used in navbar [navbar-expand-md]) */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  .about {
+    /* Adds consistent spacing between content of each row and row's border/edge of viewport */
+    padding: 2em 2em;
+  }
+
+  .portfolio {
+    /* Since class "portfolio-item" has bottom margin of 2em, decreasing this section's bottom margin by that amount */
+    padding: 2em 2em 0 2em;
+  }
+
+  .contact {
+    padding: 2em 0;
+  }
+
+  input[type=text], input[type=email], .message-box, .form-btn {
+    width: 80%;
+  }
 }
