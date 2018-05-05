@@ -9,6 +9,11 @@ body {
   width: auto;
 }
 
+.navbar {
+  /* Decreased line height makes navbar shorter */
+  line-height: 1.2em;
+}
+
 /* Applies to full name in hero image */
 h1 {
   font-family: "Playfair Display", serif;
@@ -18,7 +23,7 @@ h1 {
 /* Applies to hero image subtext, page section titles */
 h2, h5 {
   text-transform: uppercase;
-  /* Shorthand: top, horizontal (left and right), bottom. Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
+  /* Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
   margin: 0 0 1em;
 }
 
@@ -45,8 +50,13 @@ h2, h5 {
 }
 
 .hero-text {
-  /* Horizontally centers hero text */
-  margin: 0 auto;
+  /* Right/left auto margin horizontally centers hero text. Bottom margin effectively vertically centers between bottom of viewport and bottom of navbar */
+  margin: 0 auto 3.9em;
+}
+
+.hero-text h5 {
+  /* Default usually 1.2em. Increases space between lines of hero image subtitle */
+  line-height: 1.5em;
 }
 
 /* Applies to button within top hero image */
