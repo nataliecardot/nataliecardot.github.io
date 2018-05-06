@@ -207,15 +207,8 @@ input[type=text], input[type=email], .message-box {
 
 /* MEDIA QUERIES */
 
-/* Increases about section right/left padding for extra large screens */
-@media screen and (min-width: 1300px) {
-  .about {
-    padding: 3em 20em;
-  }
-}
-
-/* Special styling for screens up to 768px wide, inclusive (corresponds to Bootstrap medium breakpoint [typical for tablets], used in navbar [navbar-expand-md]) */
-@media only screen and (max-width: 768px) {
+/* Special styling for screens up to 767px wide (landscape phones) */
+@media screen and (max-width: 767px) {
   h1 {
     font-size: 2em;
   }
@@ -240,5 +233,12 @@ input[type=text], input[type=email], .message-box {
 
   input[type=text], input[type=email], .message-box, .form-btn {
     width: 80%;
+  }
+}
+
+/* Increases about section right/left padding for extra large screens */
+@media screen and (min-width: 1300px) {
+  .about {
+    padding: 3em 20em;
   }
 }
