@@ -76,6 +76,9 @@ h2, h5 {
 /* Descendant selector matches all elements that are descendants of a specified element (in this case p descendants of class "about") */
 .about p {
   text-align: left;
+  width: 36em;
+  margin: 0 auto;
+  font-size: 18px;
 }
 
 .portfolio {
