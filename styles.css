@@ -222,7 +222,7 @@ input[type=text], input[type=email], .message-box {
 
   .about {
     /* Adds consistent spacing between content of each row and row's border/edge of viewport */
-    padding: 2em 2em;
+    padding: 2em 1em;
   }
 
   .portfolio {
