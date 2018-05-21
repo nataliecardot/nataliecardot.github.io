@@ -9,6 +9,12 @@ body {
   width: auto;
 }
 
+.nav-link {
+  /* Decreases Boostrap default top/bottom padding by 0.25rem */
+  padding: 0.25rem 1rem;
+  font-size: 0.9em;
+}
+
 .navbar {
   /* Decreased line height makes navbar shorter */
   line-height: 1.2em;
