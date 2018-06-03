@@ -76,13 +76,13 @@ h2, h5 {
 }
 
 .about {
-  padding: 3em 7em;
+  padding: 3em 0;
 }
 
 /* Descendant selector matches all elements that are descendants of a specified element (in this case p descendants of class "about") */
 .about p {
   text-align: left;
-  width: 36em;
+  width: 40em;
   margin: 0 auto;
   max-width: 100%;
 }
@@ -248,6 +248,6 @@ input[type=text], input[type=email], .message-box {
 /* Increases about section right/left padding for extra large screens */
 @media screen and (min-width: 1300px) {
   .about {
-    padding: 3em 20em;
+    padding: 3em 18em;
   }
 }
