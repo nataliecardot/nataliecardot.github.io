@@ -219,4 +219,4 @@ for (let i = 0; i < cards.length; i++) {
   card.addEventListener('click', congratulations);
 }
 
-// TODO: fix bug: if you make one move and hit restart, then click one card, a second card (without an icon on it) is flipped.
+// TODO: fix bug: if you make one move and hit restart, then click one card, a second card (without an icon on it) is flipped. Bug two: when you hit restart, number of stars isn't reset.
