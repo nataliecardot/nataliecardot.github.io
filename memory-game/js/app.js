@@ -7,7 +7,8 @@ console.log(cards);
 let deck = document.getElementsByClassName('card-deck')[0];
 let moves = 0;
 let counter = document.querySelector('.moves');
-const stars = document.querySelectorAll('.fa-star');
+// Const cannot be used here in order for star rating to be reset when startGame() is called
+let stars = document.querySelectorAll('.fa-star');
 let matchingCard = document.getElementsByClassName('matching');
 let starsList = document.querySelectorAll('.stars li');
 let closeIcon = document.querySelector('.close');
@@ -219,4 +220,4 @@ for (let i = 0; i < cards.length; i++) {
   card.addEventListener('click', congratulations);
 }
 
-// TODO: fix bug: if you make one move and hit restart, then click one card, a second card (without an icon on it) is flipped. Bug two: when you hit restart, number of stars isn't reset.
+// TODO: fix bug: if you make one move and hit restart, then click one card, a second card (without an icon on it) is flipped
