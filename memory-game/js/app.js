@@ -42,8 +42,8 @@ document.body.onload = startGame();
 // Calls startGame() function with user clicks restart icon
 restartButton.addEventListener('click', startGame);
 
-// Calls startGame() function with user clicks "play again" button in modal
-modalPlayAgainButton.addEventListener('click', startGame);
+// Calls reset() function (hides modal and restarts game) with user clicks "play again" button in modal
+modalPlayAgainButton.addEventListener('click', reset);
 
 function startGame() {
   // Shuffles deck
@@ -186,7 +186,7 @@ function startTimer() {
 // Congratulates player when all cards match and shows modal, moves, time and rating
 
 function congratulations() {
-  if (matchingCard.length == 16) {
+  if (matchingCard.length == 0) {
     // Window method that stops setInterval() Window method from executing "myTimer" function every 1 second
     clearInterval(interval);
     let finalTime = timer.innerHTML;
@@ -214,6 +214,7 @@ function closeModal() {
   });
 }
 
+// Called when user hits "play again" button
 function reset() {
   modal.classList.remove('show');
   startGame();
