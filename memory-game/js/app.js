@@ -88,7 +88,7 @@ let displayCard = function() {
 function cardOpen() {
   openedCards.push(this);
   let len = openedCards.length;
-  if (len === 2) {
+  if (len === 1) {
     moveCounter();
     if (openedCards[0].type === openedCards[1].type) {
       matching();
@@ -186,7 +186,7 @@ function startTimer() {
 // Congratulates player when all cards match and shows modal, moves, time and rating
 
 function congratulations() {
-  if (matchingCard.length == 0) {
+  if (matchingCard.length == 16) {
     // Window method that stops setInterval() Window method from executing "myTimer" function every 1 second
     clearInterval(interval);
     let finalTime = timer.innerHTML;
