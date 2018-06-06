@@ -252,6 +252,10 @@ input[type=text], input[type=email], .message-box {
     padding: 2em 0;
   }
 
+  .contact p {
+    padding: 0 2em;
+  }
+
   input[type=text], input[type=email], .message-box, .form-btn {
     width: 80%;
   }
