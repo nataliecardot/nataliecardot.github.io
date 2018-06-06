@@ -26,7 +26,7 @@ form {
 input {
   border: 1px solid #ccc;
   height: 1.6em;
-  width: 29em;
+  width: 28.23em;
   color: #666;
   /* Adds space between text and input box outlines */
   padding-left: 0.5em;
@@ -45,11 +45,11 @@ button:focus {
 }
 
 button.button {
-  margin-left: -29.8px;
-  /* 2px added to account for default 1px padding of input box set by user agent (browser) stylesheet */
+  margin-left: -28px;
+  /* 2px added to account for default 1px padding of input box set by user agent (browser) stylesheet (1px top + 1px bottom = 2px) */
   height: -webkit-calc(1.6em + 2px);
   height: calc(1.6em + 2px);
-  width: 25px;
+  width:25px;
   color: grey;
   border: none;
 }

@@ -240,7 +240,6 @@ input[type=text], input[type=email], .message-box {
     padding: 1.4em;
     /* Removes margin added in main CSS */
     margin-bottom: 0;
-    }
   }
 
   .portfolio {
@@ -265,7 +264,6 @@ input[type=text], input[type=email], .message-box {
   }
 }
 
-/* Increases about section right/left padding for extra large screens */
 /* @media screen and (min-width: 1300px) {
 
 } */
