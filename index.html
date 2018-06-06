@@ -14,7 +14,7 @@
     <!-- Twitter allows substitution of Open Graph tags (Facebook's) for its own -->
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Natalie Cardot">
-    <meta property="og:description" content="Web development services">
+    <meta property="og:description" content="Web development portfolio">
     <meta property="og:url" content="http://nataliecardot.com">
     <meta property="og:site_name" content="Natalie Cardot">
     <meta property="og:image" content="https://image.ibb.co/cuRnWx/og_image_workspace.jpg">
@@ -52,8 +52,9 @@
     </nav>
     <main>
       <div class="container-fluid">
-        <div class="row">
-          <!-- p-0 removes left and right padding -->
+        <!-- TODO: put in header? -->
+        <header class="row">
+          <!-- px-0 removes left and right padding -->
           <div class="col px-0">
             <div class="hero-image">
               <div class="hero-text text-white">
@@ -65,118 +66,102 @@
               </div>
             </div>
           </div>
-        </div>
-        <section>
-          <div class="row about">
+        </header>
+        <section id="about">
+          <div class="row bg">
             <div class="col">
-              <h2>About</h2>
+              <h2 class="about-title">About</h2>
+            </div>
+          </div>
+          <div class="row bg">
+            <div class="col-md-5">
+              <img src="img/circle-portrait-small.png" class="portrait">
+            </div>
+            <div class="col-md-7 about-text">
               <p>After graduating in 2015 with a bachelor's degree in geography from the University of British Columbia, I settled in Seattle and began working at a publishing company. I've since found my passion—web development—and am continually building upon my skill set on a daily basis.</p><br>
               <p>Despite being relatively new to coding, I believe my background will serve me well in my professional career. Early in my college education, I had planned to pursue a career in fine arts. Although I instead decided to major in something more academic and practical, I retained my eye for what works and what doesn't in design. I also ran a personal finance blog for half a year during a period of career path exploration. My experience as a proofreader and web content writer has honed my ability to communicate clearly and effectively.</p><br>
               <p>During my spare time I also enjoy listening to science- and philosophy-related podcasts and working on my French.</p>
             </div>
           </div>
         </section>
-        <!-- TODO: change to class? -->
-        <section id="portfolio">
-          <div class="row portfolio">
-            <div class="col-sm-12">
-              <h2>Portfolio</h2>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-              <!-- h-100 is a Bootstrap 4 utility class that sets height to 100% -->
-              <div class="card h-100">
-                <img class="card-img-top" src="img/memory-game.jpg" alt="Memory game preview">
-                <div class="card-body d-flex flex-column">
-                  <a href="memory-game/index.html" class="text-dark" target="_blank"><h4 class="card-title">Memory Game</h4></a>
-                  <p class="card-text">Created with vanilla JavaScript.</p>
-                  <!-- mt-auto sets top margin to auto, making text aligned bottom -->
-                  <!-- <p class="card-text mt-auto">Also view: <a href="https://codepen.io/nataliecardot/pen/MXavdj" target="_blank" class="text-info">CodePen</a></p> -->
-                </div>
+        <section id="portfolio" class="row portfolio">
+          <div class="col-sm-12">
+            <h2>Portfolio</h2>
+          </div>
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <!-- h-100 is a Bootstrap 4 utility class that sets height to 100% -->
+            <div class="card h-100">
+              <a href="memory-game/index.html" target="_blank"><img class="card-img-top" src="img/memory-game.jpg" alt="Memory game preview"></a>
+              <div class="card-body d-flex flex-column">
+                <a href="memory-game/index.html" class="text-dark" target="_blank"><h4 class="card-title">Memory Game</h4></a>
+                <p class="card-text">Created with vanilla JavaScript.</p>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-              <!-- h-100 is a Bootstrap 4 utility class that sets height to 100% -->
-              <div class="card h-100">
-                <img class="card-img-top" src="https://image.ibb.co/mdODwx/tribute_page.jpg" alt="David Hume tribute page preview">
-                <div class="card-body d-flex flex-column">
-                  <a href="tribute-page/index.html" class="text-dark" target="_blank"><h4 class="card-title">Tribute Page</h4></a>
-                  <p class="card-text">Created with Bootstrap 4.</p>
-                  <!-- mt-auto sets top margin to auto, making text aligned bottom -->
-                  <!-- <p class="card-text mt-auto">Also view: <a href="https://codepen.io/nataliecardot/pen/JLwGdY" target="_blank" class="text-info">CodePen</a></p> -->
-                </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a href="tribute-page/index.html" target="_blank"><img class="card-img-top" src="https://image.ibb.co/mdODwx/tribute_page.jpg" alt="David Hume tribute page preview"></a>
+              <div class="card-body d-flex flex-column">
+                <a href="tribute-page/index.html" class="text-dark" target="_blank"><h4 class="card-title">Tribute Page</h4></a>
+                <p class="card-text">Created with Bootstrap 4.</p>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-              <div class="card h-100">
-                <img class="card-img-top" src="https://image.ibb.co/kwoA9H/pixel_art_maker_jquery.jpg" alt="jQuery pixel art maker page preview">
-                <div class="card-body d-flex flex-column">
-                  <a href="pixel-art-maker-jquery/index.html" class="text-dark" target="_blank"><h4 class="card-title">Pixel Art Maker No. 1</h4></a>
-                  <p class="card-text">Created with jQuery.</p>
-                  <!-- <p class="card-text mt-auto">Also view: <a href="https://codepen.io/nataliecardot/pen/VQRrgQ" target="_blank" class="text-info">CodePen</a></p> -->
-                </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a href="pixel-art-maker-jquery/index.html" target="_blank"><img class="card-img-top" src="https://image.ibb.co/kwoA9H/pixel_art_maker_jquery.jpg" alt="jQuery pixel art maker page preview"></a>
+              <div class="card-body d-flex flex-column">
+                <a href="pixel-art-maker-jquery/index.html" class="text-dark" target="_blank"><h4 class="card-title">Pixel Art Maker No. 1</h4></a>
+                <p class="card-text">Created with jQuery.</p>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-              <div class="card h-100">
-                <img class="card-img-top" src="https://image.ibb.co/dv3owx/pixel_art_maker_vanilla_js.jpg" alt="Vanilla JS pixel art maker page preview">
-                <div class="card-body d-flex flex-column">
-                  <a href="pixel-art-maker-vanilla-js/index.html" class="text-dark" target="_blank"><h4 class="card-title">Pixel Art Maker No. 2</h4></a>
-                  <p class="card-text">Created with vanilla JavaScript (no jQuery).</p>
-                  <!-- <p class="card-text mt-auto">Also view: <a href="https://codepen.io/nataliecardot/pen/MQRxJZ" target="_blank" class="text-info">CodePen</a></p> -->
-                </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a href="pixel-art-maker-vanilla-js/index.html" target="_blank"><img class="card-img-top" src="https://image.ibb.co/dv3owx/pixel_art_maker_vanilla_js.jpg" alt="Vanilla JS pixel art maker page preview"></a>
+              <div class="card-body d-flex flex-column">
+                <a href="pixel-art-maker-vanilla-js/index.html" class="text-dark" target="_blank"><h4 class="card-title">Pixel Art Maker No. 2</h4></a>
+                <p class="card-text">Created with vanilla JavaScript (no jQuery).</p>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-              <div class="card h-100">
-                <img class="card-img-top" src="https://image.ibb.co/j8QbGx/to_do_list_bootstrap.jpg" alt="Bootstrap/jQuery to-do-list page preview">
-                <div class="card-body d-flex flex-column">
-                  <a href="to-do-list-jquery-bootstrap/index.html" class="text-dark" target="_blank"><h4 class="card-title">To-Do List No. 1</h4></a>
-                  <p class="card-text">Created with jQuery and Bootstrap.</p>
-                  <!-- <p class="card-text mt-auto">Also view: <a href="https://codepen.io/nataliecardot/pen/NYLMwW" target="_blank" class="text-info">CodePen</a></p> -->
-                </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a href="to-do-list-jquery-bootstrap/index.html" target="_blank"><img class="card-img-top" src="https://image.ibb.co/j8QbGx/to_do_list_bootstrap.jpg" alt="Bootstrap/jQuery to-do-list page preview"></a>
+              <div class="card-body d-flex flex-column">
+                <a href="to-do-list-jquery-bootstrap/index.html" class="text-dark" target="_blank"><h4 class="card-title">To-Do List No. 1</h4></a>
+                <p class="card-text">Created with jQuery and Bootstrap.</p>
               </div>
             </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-              <div class="card h-100">
-                <img class="card-img-top" src="https://image.ibb.co/eNMmic/simple_to_do_list.jpg" alt="jQuery to-do-list page preview">
-                <div class="card-body d-flex flex-column">
-                  <a href="to-do-list-jquery/index.html" class="text-dark" target="_blank"><h4 class="card-title">To-Do List No. 2</h4></a>
-                  <p class="card-text">Created with jQuery.</p>
-                  <!-- <p class="card-text mt-auto">Also view: <a href="https://codepen.io/nataliecardot/pen/VXmPrO" target="_blank" class="text-info">CodePen</a></p> -->
-                </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a href="to-do-list-jquery/index.html" target="_blank"><img class="card-img-top" src="https://image.ibb.co/eNMmic/simple_to_do_list.jpg" alt="jQuery to-do-list page preview"></a>
+              <div class="card-body d-flex flex-column">
+                <a href="to-do-list-jquery/index.html" class="text-dark" target="_blank"><h4 class="card-title">To-Do List No. 2</h4></a>
+                <p class="card-text">Created with jQuery.</p>
               </div>
             </div>
-            <!-- <div class="col-lg-4 col-sm-6 portfolio-item">
-              <div class="card h-100">
-                <img class="card-img-top" src="https://image.ibb.co/kT8XQo/portfolio_page.jpg" alt="Portfolio page appearance">
-                <div class="card-body d-flex flex-column">
-                  <h4 class="card-title">Portfolio Page</h4>
-                  <p class="card-text">This page, created with Bootstrap 4.</p>
-                </div>
-              </div>
-            </div> -->
-          </div> <!-- End of row div -->
+          </div>
         </section>
-        <section>
-          <div class="row contact">
-            <div class="col center-block">
-              <h2>Contact</h2>
-              <p>Have a question or want to work together?</p>
-              <form action="mailto:nataliecardot@gmail.com" method="post" enctype="text/plain">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="contact-name" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control email" id="contact-email" aria-describedby="emailinfo" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                  <textarea name="message" class="form-control message-box" type="text" id="input-message" placeholder="Message" required></textarea>
-                </div>
-                <div class="form-btn">
-                  <button type="submit" class="btn btn-dark">Send</button>
-                </div>
-              </form>
-            </div>
+        <section id="contact" class="row contact bg">
+          <div class="col center-block">
+            <h2>Contact</h2>
+            <p>Have a question or want to work together?</p>
+            <form action="mailto:nataliecardot@gmail.com" method="post" enctype="text/plain">
+              <div class="form-group">
+                <input type="text" class="form-control" id="contact-name" placeholder="Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control email" id="contact-email" aria-describedby="emailinfo" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <textarea name="message" class="form-control message-box" type="text" id="input-message" placeholder="Message" required></textarea>
+              </div>
+              <div class="form-btn">
+                <button type="submit" class="btn btn-dark">Send</button>
+              </div>
+            </form>
           </div>
         </section>
       </div> <!-- End of container-fluid -->

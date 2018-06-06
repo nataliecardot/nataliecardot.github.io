@@ -1,6 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  /* background-color: #f5f5f5; */
 }
 
 /* Navbar logo */
@@ -71,20 +72,22 @@ h2, h5 {
   margin-top: 0.5em;
 }
 
-.about, .contact {
+.contact, .bg {
   background-color: WhiteSmoke;
 }
 
-.about {
-  padding: 3em 0;
+.about-title {
+  margin: 1.83em 0 1em 0;
 }
 
-/* Descendant selector matches all elements that are descendants of a specified element (in this case p descendants of class "about") */
-.about p {
+.about-text {
   text-align: left;
-  width: 40em;
-  margin: 0 auto;
-  max-width: 100%;
+  padding-right: 5em;
+  margin-bottom: 2.4em;
+}
+
+.portrait {
+  height: 400px;
 }
 
 .portfolio {
@@ -222,13 +225,22 @@ input[type=text], input[type=email], .message-box {
     font-size: 2em;
   }
 
+  /* Hero text subtitle */
   h5 {
     font-size: 1.2em;
   }
 
-  .about {
-    /* Adds consistent spacing between content of each row and row's border/edge of viewport */
-    padding: 2em 1em;
+  .about-title {
+    /* Decreases margin in main CSS, 1.83 on top, 1 and bottom */
+    margin: 1em 0 0.5em 0;
+  }
+
+  .about-text {
+    font-size: 15px;
+    padding: 1.4em;
+    /* Removes margin added in main CSS */
+    margin-bottom: 0;
+    }
   }
 
   .portfolio {
@@ -243,11 +255,13 @@ input[type=text], input[type=email], .message-box {
   input[type=text], input[type=email], .message-box, .form-btn {
     width: 80%;
   }
+
+  .portrait {
+    height: 250px;
+  }
 }
 
 /* Increases about section right/left padding for extra large screens */
-@media screen and (min-width: 1300px) {
-  .about {
-    padding: 3em 18em;
-  }
-}
+/* @media screen and (min-width: 1300px) {
+
+} */
