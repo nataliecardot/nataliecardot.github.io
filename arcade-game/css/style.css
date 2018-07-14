@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+/* Game title displayed in sidebar */
+.game-name {
+  /* Default for h1 is 2em */
+  font-size: 4em;
+  font-family: Ranchers;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  color: #cf3c3c;
+}
+
+p {
+  font-size: 1.2em;
+  margin-left: 1.9em;
+  margin-right: 1.9em;
+}
+
+/* Adds extra space below line listing score and remaining lives (default bottom margin for p element is 1em) */
+.player-info {
+  margin-bottom: 1.5em;
+}
+
+body {
+  text-align: center;
+  background: #ececec;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.info-panel {
+  background-color: #fff;
+  /* Allows game to display next to panel rather than below it */
+  position: absolute;
+  left: 0;
+  width: 35%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Adds some extra space to left of score displayed in side panel */
+.score {
+  padding-right: 0.5em;
+}
+
+/* MODAL */
+
+.modal {
+  display: none;
+  width: 33%;
+  height: 39%;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #c5c4c4;
+  position: absolute;
+  top: 29%;
+  left: 51%;
+}
+
+/* Added by function showModal() to element with id of "myModal," which is same element that has class "modal." Due to cascade, this selector's declaration overtakes display: none given to class "modal" */
+.modal-visible {
+  display: block;
+}
+
+.modal-content {
+  margin: 0 auto;
+  padding: 30px;
+  width: 80%;
+}
+
+.modal-content p {
+  font-size: 1.3rem;
+  margin: 1.2em 0;
+}
+
+/* Affects "x" button on modal */
+.close {
+	position: absolute;
+  font-weight: bold;
+	top: 20px;
+	right: 30px;
+	font-size: 30px;
+  /* Removes default (link) underline */
+	text-decoration: none;
+	color: #333;
+}
+
+.close:hover {
+  color: #2f4dbd;
+}
+
+.canvas {
+  margin-left: 28em;
+}
+
+/* Game play again/restart button */
+.restart {
+	cursor: pointer;
+  color: #2eb82e;
+}
+
+/* Affects button inside modal that resets game on click */
+.play-again {
+  cursor: pointer;
+	background-color: #4569ee;
+  /* Removes default border that looks like shadow */
+  border: none;
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+  /* Button elements are inline-block by default */
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+	color: #fff;
+	border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2f4dbd;
+}
