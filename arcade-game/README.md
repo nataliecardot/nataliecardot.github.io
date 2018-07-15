@@ -4,13 +4,13 @@
 
 This simple game is similar to Frogger: the goal is to get to the other side of the screen without hitting a moving object (bugs).
 
-### Instructions
+### Getting started
 
-Click the link below to play in your browser.
+Click the link below to play.
 
 [Bug Dash](https://nataliecardot.com/arcade-game/index.html)
 
-Alternatively, clone the repository and open the index.html file in your browser.
+Alternatively, download the repository, unzip it to a destination of your choice, and open the index.html file in your browser.
 
 ### How to Play
 
