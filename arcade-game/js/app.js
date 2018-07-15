@@ -161,7 +161,7 @@ function showModal() {
     let keyCode = e.keyCode;
     if (keyCode === 27) {
       modal.classList.remove('modal-visible');
-      playAgain()
+      playAgain();
     }
   });
 
