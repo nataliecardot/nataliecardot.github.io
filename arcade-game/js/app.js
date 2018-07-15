@@ -1,9 +1,5 @@
 "use strict"; // Enables strict mode to catch common bloopers
 
-// TODO: Disable player movement when modal opened? Also, set 3 tries before modal opened (change to game over). Restart button.
-
-// TODO: Start game on enter when modal opened
-
 const playAgainButton = document.querySelector('.play-again');
 const restartButton = document.querySelector('.restart');
 
@@ -13,25 +9,25 @@ restartButton.addEventListener('click', playAgain);
 // Starts lives at 3
 let lives = 3;
 
+// Used to disable arrow keys while modal opened
+let isDead = false;
+
 let sidebarLives = document.querySelector('.lives-left');
 sidebarLives.innerHTML = lives;
 
-// Sets an initial player score of 0.
+// Sets an initial player score of 0
 let score = 0;
+
 // Sets score shown in sidebar
-// document.getElementsByClassName('score')[0].innerHTML = score;
 let sidebarScore = document.querySelector('.score');
 sidebarScore.innerHTML = score;
 
 let modalScore = document.querySelector('.modal-score');
 modalScore.innerHTML = score;
 
-// These 2 lines were used to set star rating in modal
-// let starRating = document.querySelector('.stars').innerHTML;
-// document.getElementsByClassName('star-rating')[0].innerHTML = starRating;
-
 // Called when user clicks restart button in sidebar or play again button in modal. Sets modal to display: none, resets lives and score
 function playAgain() {
+  isDead = false;
   // Hides modal if present (if opened by game ending)
   modal.classList.remove('modal-visible');
   lives = 3;
@@ -39,10 +35,6 @@ function playAgain() {
   score = 0;
   sidebarScore.innerHTML = score;
 }
-
-// Calls playAgain() function (hides modal and restarts game) with user clicks "play again" button in modal
-// TODO: remove? just one event listener for both buttons?
-// modalPlayAgainButton.addEventListener('click', playAgain);
 
 // Note: In a constructor function "this" does not have a value. It is a substitute for the new object. The value of this will become the new object when a new object is created
 
@@ -73,8 +65,11 @@ class Player {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
   }
 
-  // Connects keyboard input to player movement. If statements prevent player movement off screen
+  // If isDead is false (so it doesn't work when the modal is opened), connects keyboard input to player movement. If statements prevent player movement off screen
   handleInput(allowedKeys) {
+    if (isDead) {
+      return;
+    }
 
     if (allowedKeys === 'down' && this.y < 425) {
       this.y += 25;
@@ -123,18 +118,18 @@ class Enemy {
       sidebarLives.innerHTML = lives;
       modalScore.innerHTML = score;
       if (lives === 0) {
+        isDead = true;
         // Calls function that adds class that sets modal to display: block
         showModal();
       }
     }
   }
 
-  // Draws enemy on the screen
+  // Draws enemy on screen
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 };
-
 
 // ENEMY/PLAYER OBJECT INSTANTIATION
 
@@ -149,7 +144,7 @@ enemyPosition.forEach(function(posY) {
   allEnemies.push(enemy);
 });
 
-// Modal
+// MODAL
 
 const modal = document.getElementById('myModal');
 const closeIcon = document.querySelector('.close');
@@ -186,7 +181,6 @@ function showModal() {
   });
 }
 
-
 // Listens for keydown event (fired when a key is pressed down [regardless of whether it produces a character, unlike keypress]) and sends the keys to Player.handleInput() method
 document.addEventListener('keydown', function(e) {
   let allowedKeys = {
@@ -195,6 +189,7 @@ document.addEventListener('keydown', function(e) {
     39: 'right',
     40: 'down'
   };
-  // Not sure why "player" needs to be lowercase, given the class name is uppercase
+
+  // "player" needs to be lowercase because an instance of the class is needed
   player.handleInput(allowedKeys[e.keyCode]);
 });
