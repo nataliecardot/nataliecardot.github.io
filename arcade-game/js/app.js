@@ -131,7 +131,22 @@ class Enemy {
   }
 };
 
-// ENEMY/PLAYER OBJECT INSTANTIATION
+class Gem {
+  constructor(x, y) {
+    this.sprite = 'images/Gem Blue.png';
+    this.x = x;
+    this.y = y;
+  }
+
+  // Draws gem on screen
+  render() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
+  }
+}
+
+// ENEMY/PLAYER/GEM OBJECT INSTANTIATION
+
+let gem = new Gem(230, 140);
 
 let enemyPosition = [60, 140, 220];
 
