@@ -154,6 +154,7 @@ let Engine = (function(global) {
     });
 
     player.render();
+    gem.render();
   }
 
   /* This function does nothing but it could have been a good place to
