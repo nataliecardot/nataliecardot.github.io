@@ -38,6 +38,20 @@ function playAgain() {
 
 // Note: In a constructor function "this" does not have a value. It is a substitute for the new object. The value of this will become the new object when a new object is created
 
+class Gem {
+  constructor(x, y) {
+    // Math.random() function returns random number between 0 (inclusive) and 1 (exclusive). Math.floor() returns the largest integer less than or equal to a given number. Since collectibles is an array, starts at 0, so we want index 0, 1, or 2. (If Math.random were 0.99, it would would become 2.99 after being multiplied by 3, then Math.floor would make it 2)
+    this.sprite = collectibles[Math.floor(Math.random() * 3)];
+    this.x = x;
+    this.y = y;
+  }
+
+  // Draws gem on screen
+  render() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
+  }
+}
+
 // Note commas not used to separate methods and properties in a class
 class Player {
   // Constructor function, a special function just for initializing new objects, will automatically run when a new object is constructed (with keyword "new") from this class. Contains data needed to create it
@@ -58,6 +72,11 @@ class Player {
       score++;
       sidebarScore.innerHTML = score;
   	}
+
+    if ((this.x == gem.x) && (this.y == gem.y)) {
+      score += 10;
+      sidebarScore.innerHTML = score;
+    }
   }
 
   // Draws player on screen
@@ -131,18 +150,11 @@ class Enemy {
   }
 };
 
-class Gem {
-  constructor(x, y) {
-    this.sprite = 'images/Gem Blue.png';
-    this.x = x;
-    this.y = y;
-  }
-
-  // Draws gem on screen
-  render() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
-  }
-}
+let collectibles = [
+  'images/Gem Blue.png',
+  'images/Gem Orange.png',
+  'images/Gem Green.png',
+];
 
 // ENEMY/PLAYER/GEM OBJECT INSTANTIATION
 
