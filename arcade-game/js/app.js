@@ -1,4 +1,4 @@
-"use strict"; // Enables strict mode to catch common bloopers
+'use strict'; // Enables strict mode to catch common bloopers
 
 const playAgainButton = document.querySelector('.play-again');
 const restartButton = document.querySelector('.restart');
