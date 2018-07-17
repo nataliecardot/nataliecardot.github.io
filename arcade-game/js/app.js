@@ -45,8 +45,10 @@ function playAgain() {
   sidebarLives.innerHTML = lives;
   score = 0;
   sidebarScore.innerHTML = score;
+  // Generates new gem of random color and random x and y value from arrays
   gem.x = gemX[Math.floor(Math.random() * gemX.length)];
   gem.y = gemY[Math.floor(Math.random() * gemY.length)];
+  gem.sprite = collectibles[Math.floor(Math.random() * 3)];
 }
 
 // Note: In a constructor function "this" does not have a value. It is a substitute for the new object. The value of this will become the new object when a new object is created
@@ -161,8 +163,10 @@ class Gem {
 
   update() {
     if ((player.x - this.x < 30) && (this.x - player.x < 30) && (this.y - player.y < 30) && (player.y - this.y < 30)) {
+      // Generates new gem of random color and random x and y value from arrays
       this.x = gemX[Math.floor(Math.random() * gemX.length)];
       this.y = gemY[Math.floor(Math.random() * gemY.length)];
+      this.sprite = collectibles[Math.floor(Math.random() * 3)];
       score += 5;
       sidebarScore.innerHTML = score;
     }
