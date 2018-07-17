@@ -152,8 +152,6 @@ class Gem {
     this.sprite = collectibles[Math.floor(Math.random() * 3)];
     this.x = randomGemX;
     this.y = randomGemY;
-    // 1 of 5 x (horizontal) values: (start at left) 17, 119, 220, 321, 422;
-    //  1 of 3 y (vertical) values (start at top): 124, 208, 292
   }
 
   // Draws gem on screen
