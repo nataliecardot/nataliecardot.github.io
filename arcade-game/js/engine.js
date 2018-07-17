@@ -94,6 +94,7 @@ let Engine = (function(global) {
       enemy.update(dt);
     });
     player.update();
+    gem.update();
   }
 
   /* This function initially draws the "game level", it will then call
@@ -175,9 +176,9 @@ let Engine = (function(global) {
     'images/grass-block.png',
     'images/enemy-bug.png',
     'images/char-boy.png',
-    'images/Gem Blue.png',
-    'images/Gem Orange.png',
-    'images/Gem Green.png',
+    'images/Gem Blue Sm.png',
+    'images/Gem Orange Sm.png',
+    'images/Gem Green Sm.png',
   ]);
   Resources.onReady(init);
 

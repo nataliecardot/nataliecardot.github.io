@@ -9,6 +9,17 @@ restartButton.addEventListener('click', playAgain);
 // Starts lives at 3
 let lives = 3;
 
+// 1 of 5 x (horizontal) values: (start at left) 17, 119, 220, 321, 422;
+let gemX = [17, 119, 220, 321, 422];
+
+// Selects random index from gemX. Math.random returns a random number between 0 inclusive to 1 exclusive. So if were to produced 0.55, that would be multiplied by 5 (in this case), which equals 2.75, then Math.floor would round it down to the nearest integer (unless it's already an integer, which can only be 0), which equals 2, resulting in randomGemX equaling the third index, 220.
+let randomGemX = gemX[Math.floor(Math.random() * gemX.length)];
+
+//  1 of 3 y (vertical) values (start at top): 124, 208, 292
+let gemY = [124, 208, 290];
+
+let randomGemY = gemY[Math.floor(Math.random() * gemY.length)];
+
 // Used to disable arrow keys while modal opened
 let isDead = false;
 
@@ -34,23 +45,11 @@ function playAgain() {
   sidebarLives.innerHTML = lives;
   score = 0;
   sidebarScore.innerHTML = score;
+  gem.x = gemX[Math.floor(Math.random() * gemX.length)];
+  gem.y = gemY[Math.floor(Math.random() * gemY.length)];
 }
 
 // Note: In a constructor function "this" does not have a value. It is a substitute for the new object. The value of this will become the new object when a new object is created
-
-class Gem {
-  constructor(x, y) {
-    // Math.random() function returns random number between 0 (inclusive) and 1 (exclusive). Math.floor() returns the largest integer less than or equal to a given number. Since collectibles is an array, starts at 0, so we want index 0, 1, or 2. (If Math.random were 0.99, it would would become 2.99 after being multiplied by 3, then Math.floor would make it 2)
-    this.sprite = collectibles[Math.floor(Math.random() * 3)];
-    this.x = x;
-    this.y = y;
-  }
-
-  // Draws gem on screen
-  render() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
-  }
-}
 
 // Note commas not used to separate methods and properties in a class
 class Player {
@@ -65,18 +64,13 @@ class Player {
   // Methods that all objects created from class will inherit. Would exist on prototype in pre-class way of writing it, but effect is the same (the following methods still exist on Player prototype [for example would be Player.prototype.update = function(dt)...])
 
   // When player reaches water, moves player back to starting position, and increase score by 1
-  update(dt) {
+  update() {
     if (this.y === 25) {
       this.x = 200;
       this.y = 400;
       score++;
       sidebarScore.innerHTML = score;
   	}
-
-    if ((this.x == gem.x) && (this.y == gem.y)) {
-      score += 10;
-      sidebarScore.innerHTML = score;
-    }
   }
 
   // Draws player on screen
@@ -129,7 +123,7 @@ class Enemy {
       this.speed = 70 + Math.floor(Math.random() * 450);
     }
 
-    // When collission occurs, subtracts a life, updates lives displayed in sidebar and updates score that will be displayed in modal if no lives remaining
+    // When collision occurs, subtracts a life, updates lives displayed in sidebar, and updates score that will be displayed in modal if no lives remaining
     if ((player.x < (this.x + 70)) && ((player.x + 17) > this.x) && (player.y < (this.y + 45)) && ((30 + player.y) > this.y)) {
   		player.x = 200;
   		player.y = 400;
@@ -150,15 +144,40 @@ class Enemy {
   }
 };
 
+class Gem {
+  constructor(x, y) {
+    // Math.random() function returns random number between 0 (inclusive) and 1 (exclusive). Math.floor() returns the largest integer less than or equal to a given number. Since collectibles is an array, starts at 0, so we want index 0, 1, or 2. (If Math.random were 0.99, it would would become 2.99 after being multiplied by 3, then Math.floor would make it 2)
+    this.sprite = collectibles[Math.floor(Math.random() * 3)];
+    this.x = randomGemX;
+    this.y = randomGemY;
+    // 1 of 5 x (horizontal) values: (start at left) 17, 119, 220, 321, 422;
+    //  1 of 3 y (vertical) values (start at top): 124, 208, 292
+  }
+
+  // Draws gem on screen
+  render() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
+  }
+
+  update() {
+    if ((player.x - this.x < 30) && (this.x - player.x < 30) && (this.y - player.y < 30) && (player.y - this.y < 30)) {
+      this.x = gemX[Math.floor(Math.random() * gemX.length)];
+      this.y = gemY[Math.floor(Math.random() * gemY.length)];
+      score += 5;
+      sidebarScore.innerHTML = score;
+    }
+  }
+}
+
 let collectibles = [
-  'images/Gem Blue.png',
-  'images/Gem Orange.png',
-  'images/Gem Green.png',
+  'images/Gem Blue Sm.png',
+  'images/Gem Orange Sm.png',
+  'images/Gem Green Sm.png',
 ];
 
 // ENEMY/PLAYER/GEM OBJECT INSTANTIATION
 
-let gem = new Gem(230, 140);
+let gem = new Gem(randomGemX, randomGemY);
 
 let enemyPosition = [60, 140, 220];
 
@@ -167,6 +186,7 @@ let allEnemies = [];
 let player = new Player(200, 400, 50);
 
 enemyPosition.forEach(function(posY) {
+  // x position of 0, y of whatever is passed in, and random speed
   let enemy = new Enemy(0, posY, 70 + Math.floor(Math.random() * 450));
   allEnemies.push(enemy);
 });
