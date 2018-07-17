@@ -161,7 +161,7 @@ class Gem {
 
   update() {
     // Not sure why this if statement only works when player approaches gem from below (a higher y value)
-    if ((Math.abs(player.x - this.x) < 50) && (Math.abs(player.y - this.y)) < 50) {
+    if ((Math.abs(player.x - this.x) < 30) && (Math.abs(player.y - this.y)) < 30) {
       // Generates new gem of random color and random x and y value from arrays
       this.x = gemX[Math.floor(Math.random() * gemX.length)];
       this.y = gemY[Math.floor(Math.random() * gemY.length)];
