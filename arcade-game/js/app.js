@@ -36,9 +36,11 @@ sidebarScore.innerHTML = score;
 let modalScore = document.querySelector('.modal-score');
 modalScore.innerHTML = score;
 
-// Called when user clicks restart button in sidebar or play again button in modal. Sets modal to display: none, resets lives and score
+// Called when user clicks restart button in sidebar or play again button in modal. Sets modal to display: none, resets lives and score, moves player back to starting position
 function playAgain() {
   isDead = false;
+  player.x = 200;
+  player.y = 400;
   // Hides modal if present (if opened by game ending)
   modal.classList.remove('modal-visible');
   lives = 3;
@@ -81,13 +83,14 @@ class Player {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
   }
 
+  // Object containing character images is passed in as an argument in this method's call
   setSpriteBank(bank) {
     this.sprites = bank;
   }
 
-  // Checks if possible character selection and changes sprite info
+  // Hidden p text from li items is passed into this method via forEach loop
   setSprite(char) {
-    // Object.keys() method returns array of given object's property names, in ascending order.
+    // This method is only called when li item (from variable characters) is clicked--then p text is passed as this method's argument. Object.keys() method returns array of given object's keys/property names, in ascending order. In this case they are from the playerSprites variable (object literal), which contains hidden p element text as keys and associated image's path as values, since this is passed in by call to setSpriteBank. If statement says if p text (key/property name) includes what is passed into this method, player sprite is set to value for that key
     if (Object.keys(this.sprites).includes(char)) {
       this.sprite = this.sprites[char];
     }
@@ -260,7 +263,7 @@ document.addEventListener('keydown', function(e) {
 
 // Character selection controls
 
-// List of possible player sprites
+// Possible player sprites. Keys/property names are associated with hidden p text in each li element (which also contains images)
 const playerSprites = {
   boy: 'images/char-boy.png',
   catGirl: 'images/char-cat-girl.png',
@@ -269,15 +272,17 @@ const playerSprites = {
   princess: 'images/char-princess-girl.png'
 };
 
-// Pushes in list to Player instance
+// Pushes in list to method in Player class
 player.setSpriteBank(playerSprites);
 
+// Returns static NodeList of li elements in (ul with) class .char-selector
 const characters = document.querySelectorAll('.char-selector li');
 
-// Iterate through character selectors
+// Iterate through li elements, adding event listener for each. When clicked the text from p (with attribute hidden) in li item will be passed to setSprite method in Player class (causing character to change accordingly) and game will be reset
 characters.forEach(character => {
   character.addEventListener('click', () => {
     // Set sprite from user selection
     player.setSprite(character.querySelector('p').innerHTML);
+    playAgain();
   });
 });
