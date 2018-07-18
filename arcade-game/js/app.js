@@ -57,6 +57,7 @@ function playAgain() {
 class Player {
   // Constructor function, a special function just for initializing new objects, will automatically run when a new object is constructed (with keyword "new") from this class. Contains data needed to create it
   constructor(x, y, speed) {
+    this.sprites = []; // Bank of possible sprites
     this.sprite = 'images/char-boy.png';
     this.x = x;
     this.y = y;
@@ -78,6 +79,18 @@ class Player {
   // Draws player on screen
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
+  }
+
+  setSpriteBank(bank) {
+    this.sprites = bank;
+  }
+
+  // Checks if possible character selection and changes sprite info
+  setSprite(char) {
+    // Object.keys() method returns array of given object's property names, in ascending order.
+    if (Object.keys(this.sprites).includes(char)) {
+      this.sprite = this.sprites[char];
+    }
   }
 
   // If isDead is false (so it doesn't work when the modal is opened), connects keyboard input to player movement. If statements prevent player movement off screen
@@ -172,24 +185,25 @@ class Gem {
   }
 }
 
-let collectibles = [
+const collectibles = [
   'images/Gem Blue Sm.png',
   'images/Gem Orange Sm.png',
-  'images/Gem Green Sm.png',
+  'images/Gem Green Sm.png'
 ];
 
 // ENEMY/PLAYER/GEM OBJECT INSTANTIATION
 
 let gem = new Gem(randomGemX, randomGemY);
 
-let enemyPosition = [60, 140, 220];
+// Y position of enemies (smaller number means higher up)
+let enemyPosition = [61, 145, 227, 308];
 
 let allEnemies = [];
 
 let player = new Player(200, 400, 50);
 
 enemyPosition.forEach(function(posY) {
-  // x position of 0, y of whatever is passed in, and random speed
+  // X position of 0 (out of view to the left of the game board), Y of whatever is passed in, and random speed within a range
   let enemy = new Enemy(0, posY, 70 + Math.floor(Math.random() * 450));
   allEnemies.push(enemy);
 });
@@ -242,4 +256,28 @@ document.addEventListener('keydown', function(e) {
 
   // "player" needs to be lowercase because an instance of the class is needed
   player.handleInput(allowedKeys[e.keyCode]);
+});
+
+// Character selection controls
+
+// List of possible player sprites
+const playerSprites = {
+  boy: 'images/char-boy.png',
+  catGirl: 'images/char-cat-girl.png',
+  hornGirl: 'images/char-horn-girl.png',
+  pinkGirl: 'images/char-pink-girl.png',
+  princess: 'images/char-princess-girl.png'
+};
+
+// Pushes in list to Player instance
+player.setSpriteBank(playerSprites);
+
+const characters = document.querySelectorAll('.char-selector li');
+
+// Iterate through character selectors
+characters.forEach(character => {
+  character.addEventListener('click', () => {
+    // Set sprite from user selection
+    player.setSprite(character.querySelector('p').innerHTML);
+  });
 });

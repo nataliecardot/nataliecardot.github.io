@@ -105,6 +105,7 @@ body {
 .restart {
 	cursor: pointer;
   color: #2eb82e;
+  margin-bottom: 1em;
 }
 
 /* Affects button inside modal that resets game on click */
@@ -125,4 +126,30 @@ body {
 
 button:hover {
   background-color: #2f4dbd;
+}
+
+/* Character selection section */
+
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.char-selector {
+  display: flex;
+  margin: 0;
+}
+
+.char-selector li {
+  list-style: none;
+}
+
+.char-selector img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.char-selector img {
+  width: 50px;
 }
