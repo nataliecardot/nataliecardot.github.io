@@ -9,18 +9,18 @@ restartButton.addEventListener('click', playAgain);
 // Starts lives at 3
 let lives = 3;
 
-// 1 of 5 x (horizontal) values: (start at left) 17, 119, 220, 321, 422;
+// X-axis (horizontal) values: (start from left)
 let gemX = [17, 119, 220, 321, 422];
 
 // Selects random index from gemX. Math.random returns a random number between 0 inclusive to 1 exclusive. So if were to produced 0.55, that would be multiplied by 5 (in this case), which equals 2.75, then Math.floor would round it down to the nearest integer (unless it's already an integer, which can only be 0), which equals 2, resulting in randomGemX equaling the third index, 220.
 let randomGemX = gemX[Math.floor(Math.random() * gemX.length)];
 
-//  1 of 3 y (vertical) values (start at top): 124, 208, 292
-let gemY = [124, 208, 290];
+// Y-axis (vertical) values (start from top)
+let gemY = [124, 208, 290, 373];
 
 let randomGemY = gemY[Math.floor(Math.random() * gemY.length)];
 
-// Used to disable arrow keys while modal opened
+// Used to disable arrow keys while modal opened (used in handleInput() method in class Player)
 let isDead = false;
 
 let sidebarLives = document.querySelector('.lives-left');
@@ -35,6 +35,14 @@ sidebarScore.innerHTML = score;
 
 let modalScore = document.querySelector('.modal-score');
 modalScore.innerHTML = score;
+
+let enterPress = function(e) {
+  let keyCode = e.keyCode;
+  if (keyCode === 13) {
+    modal.classList.remove('modal-visible');
+    playAgain()
+  }
+};
 
 // Called when user clicks restart button in sidebar or play again button in modal. Sets modal to display: none, resets lives and score, moves player back to starting position
 function playAgain() {
@@ -51,6 +59,7 @@ function playAgain() {
   gem.x = gemX[Math.floor(Math.random() * gemX.length)];
   gem.y = gemY[Math.floor(Math.random() * gemY.length)];
   gem.sprite = collectibles[Math.floor(Math.random() * 3)];
+  document.removeEventListener('keydown', enterPress);
 }
 
 // Note: In a constructor function "this" does not have a value. It is a substitute for the new object. The value of this will become the new object when a new object is created
@@ -64,6 +73,8 @@ class Player {
     this.x = x;
     this.y = y;
     this.speed = speed;
+    this.imgWidth = 101;    // sprite image width
+    this.imgHeight = 171; // sprite image height
   }
 
   // Methods that all objects created from class will inherit. Would exist on prototype in pre-class way of writing it, but effect is the same (the following methods still exist on Player prototype [for example would be Player.prototype.update = function(dt)...])
@@ -142,7 +153,7 @@ class Enemy {
     }
 
     // When collision occurs, subtracts a life, updates lives displayed in sidebar, and updates score that will be displayed in modal if no lives remaining
-    if ((player.x < (this.x + 70)) && ((player.x + 17) > this.x) && (player.y < (this.y + 45)) && ((30 + player.y) > this.y)) {
+    if ((player.x < (this.x + 50)) && ((player.x + 17) > this.x) && (player.y < (this.y + 50)) && ((50 + player.y) > this.y)) {
   		player.x = 200;
   		player.y = 400;
       lives--;
@@ -168,6 +179,8 @@ class Gem {
     this.sprite = collectibles[Math.floor(Math.random() * 3)];
     this.x = randomGemX;
     this.y = randomGemY;
+    this.imgWidth = 65;
+    this.imgHeight = 88;
   }
 
   // Draws gem on screen
@@ -177,7 +190,7 @@ class Gem {
 
   update() {
     // Not sure why this if statement only works when player approaches gem from below (a higher y value)
-    if ((Math.abs(player.x - this.x) < 30) && (Math.abs(player.y - this.y)) < 30) {
+    if ( ((Math.abs( (player.imgWidth + player.x) - (this.x + this.imgWidth) ) < 55)) && ((Math.abs( (player.imgHeight + player.y) - (this.y + this.imgHeight) ) < 55)) ) {
       // Generates new gem of random color and random x and y value from arrays
       this.x = gemX[Math.floor(Math.random() * gemX.length)];
       this.y = gemY[Math.floor(Math.random() * gemY.length)];
@@ -203,7 +216,7 @@ let enemyPosition = [61, 145, 227, 308];
 
 let allEnemies = [];
 
-let player = new Player(200, 400, 50);
+let player = new Player(202, 396);
 
 enemyPosition.forEach(function(posY) {
   // X position of 0 (out of view to the left of the game board), Y of whatever is passed in, and random speed within a range
@@ -233,13 +246,7 @@ function showModal() {
   });
 
   // If enter is pressed, closes modal and restarts game
-  document.addEventListener('keydown', function(e) {
-    let keyCode = e.keyCode;
-    if (keyCode === 13) {
-      modal.classList.remove('modal-visible');
-      playAgain()
-    }
-  });
+  document.addEventListener('keydown', enterPress);
 
   // If user clicks modal's close icon, closes modal and restarts game
   closeIcon.addEventListener('click', function() {
