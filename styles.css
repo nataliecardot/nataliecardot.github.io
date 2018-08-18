@@ -221,6 +221,10 @@ input[type=text], input[type=email], .message-box {
 
 /* Special styling for screens up to 767px wide (landscape phones) */
 @media screen and (max-width: 767px) {
+  .hero-image {
+    background-image: url(img/desk.jpg);
+  }
+
   h1 {
     font-size: 2em;
   }
