@@ -24,11 +24,11 @@ body {
 h1 {
   font-family: "Raleway", sans-serif;
   margin-bottom: 0.7em;
+  letter-spacing: 2px;
 }
 
 /* Applies to (h2) hero image subtitle */
 .header-subheading {
-  font-size: 20px;
   /* Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
   margin: 0 0 1em;
 }
@@ -39,8 +39,7 @@ h1 {
   text-transform: uppercase;
   /* Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
   margin: 0 0 1em;
-  font-size: 30px;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 /* Applies to about section title (h3 heading). Needs its own margin settings, so can't use default section-title styling */
@@ -48,16 +47,15 @@ h1 {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   margin: 1.83em 0 1em 0;
-  font-size: 30px;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 /* Applies to (h4) about section subheadings */
 .about-subheader {
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  font-size: 20px;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin: 2em 0 1em 0;
 }
 
@@ -67,7 +65,7 @@ h1 {
 }
 
 .hero-image {
-  background-image: url(img/desk.jpg);
+  background-image: url(img/sequins.jpg);
   /* Sets height to full height (100%) of viewport */
   height: 100vh;
   /* Ensures background image spans full width of viewport */
@@ -193,7 +191,7 @@ input[type=text], input[type=email], .message-box {
   display: none;
 }
 
-/* Styles navbar toggler and links (overrides Bootstrap 4 defaults) */
+/* STYLES NAVBAR TOGGLER AND LINKS (OVERRIDES BOOTSTRAP 4 DEFAULTS) */
 
 /* Removes default toggler icon border */
 .navbar-toggler {
@@ -229,12 +227,12 @@ input[type=text], input[type=email], .message-box {
 
 /* Special styling for screens up to 767px wide (landscape phones) */
 @media screen and (max-width: 767px) {
-  p {
+  p, li {
     font-size: 14px;
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 33px;
   }
 
   /* Applies to hero image subtitle */
@@ -254,7 +252,6 @@ input[type=text], input[type=email], .message-box {
 
   /* Applies to (h4) about section subheadings */
   .about-subheader {
-    /* Default is 20px */
     font-size: 17px;
   }
 
@@ -263,6 +260,7 @@ input[type=text], input[type=email], .message-box {
     padding: 1.4em;
     /* Removes margin added in main CSS */
     margin-bottom: 0;
+    margin-left: 5px;
   }
 
   .portfolio {
@@ -283,7 +281,6 @@ input[type=text], input[type=email], .message-box {
   }
 
   .portrait {
-    /* 400px by default */
     height: 250px;
   }
 
@@ -295,14 +292,17 @@ input[type=text], input[type=email], .message-box {
 
 /* Tablets/small screens */
 @media screen and (min-width: 768px) {
+  p, li {
+    font-size: 14px;
+  }
+
   h1 {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   /* Applies to (h2) hero image subtitle */
   .header-subheading {
-    /* Default is 20px */
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .section-title {
@@ -315,26 +315,89 @@ input[type=text], input[type=email], .message-box {
 
   /* Applies to (h4) about section subheadings */
   .about-subheader {
-    /* Default is 20px */
     font-size: 16px;
   }
 
   .portrait {
-    height: 300px;
+    height: 290px;
+    margin-top: 4em;
+  }
+
+  /* Class given to "coming soon" project placeholder. Hiding since has no aesthetic purpose in single-column layout */
+  .coming-soon {
+    display: none;
   }
 }
 
-/* Small laptops/medium screens */
+/* Small laptops/medium screens. Point at which Bootstrap columns quit stacking */
 @media screen and (min-width: 992px) {
+  p, li {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  /* Applies to (h2) hero image subtitle */
+  .header-subheading {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 29px;
+  }
+
+  .about-title {
+    font-size: 29px;
+  }
+
+  /* Applies to (h4) about section subheadings */
+  .about-subheader {
+    font-size: 18px;
+  }
+
   .portrait {
     height: 350px;
+    margin-top: 7em;
   }
 }
 
 /* Regular and large laptops, desktops/large screens */
 @media screen and (min-width: 1200px) {
+  p, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  /* Applies to (h2) hero image subtitle */
+  .header-subheading {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+
+  /* Applies to (h4) about section subheadings */
+  .about-subheader {
+    font-size: 18px;
+  }
+
+  .portrait {
+    height: 350px;
+  }
+
   .portrait {
     /* Image is 800 x 800 */
-    height: 425px;
+    height: 400px;
+    margin: 5em 0 0 1em;
   }
 }
