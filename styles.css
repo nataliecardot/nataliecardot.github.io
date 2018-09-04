@@ -1,7 +1,6 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
-  /* background-color: #f5f5f5; */
 }
 
 /* Navbar logo */
@@ -23,15 +22,43 @@ body {
 
 /* Applies to full name in hero image */
 h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "Raleway", sans-serif;
   margin-bottom: 0.7em;
 }
 
-/* Applies to hero image subtext, page section titles */
-h2, h5 {
+/* Applies to (h2) hero image subtitle */
+.header-subheading {
+  font-size: 20px;
+  /* Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
+  margin: 0 0 1em;
+}
+
+/* Applies to portfolio and contact section titles (h3 headings) */
+.section-title {
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   /* Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
   margin: 0 0 1em;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+/* Applies to about section title (h3 heading). Needs its own margin settings, so can't use default section-title styling */
+.about-title {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  margin: 1.83em 0 1em 0;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+/* Applies to (h4) about section subheadings */
+.about-subheader {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 2em 0 1em 0;
 }
 
 /* Applies to text in project descriptions */
@@ -40,7 +67,7 @@ h2, h5 {
 }
 
 .hero-image {
-  background-image: url(img/gold-desk.jpg);
+  background-image: url(img/desk.jpg);
   /* Sets height to full height (100%) of viewport */
   height: 100vh;
   /* Ensures background image spans full width of viewport */
@@ -61,33 +88,14 @@ h2, h5 {
   margin: 0 auto 3.9em;
 }
 
-.hero-text h5 {
-  /* Default usually 1.2em. Increases space between lines of hero image subtitle */
-  line-height: 1.5em;
-}
-
-/* Applies to button within top hero image */
-.hero-contact {
-  /* Combines with 1em bottom margin set for h5 elements for total of 1.5 em between button and text "web developer" */
-  margin-top: 0.5em;
-}
-
 .contact, .bg {
   background-color: WhiteSmoke;
-}
-
-.about-title {
-  margin: 1.83em 0 1em 0;
 }
 
 .about-text {
   text-align: left;
   padding-right: 5em;
   margin-bottom: 2.4em;
-}
-
-.portrait {
-  height: 400px;
 }
 
 .portfolio {
@@ -125,8 +133,8 @@ h2, h5 {
   color: white;
 }
 
-.fab:hover {
-  /* Matches CodePen links */
+.fab:hover, a {
+  /* Teal */
 	color: #17a2b8;
 }
 
@@ -221,22 +229,33 @@ input[type=text], input[type=email], .message-box {
 
 /* Special styling for screens up to 767px wide (landscape phones) */
 @media screen and (max-width: 767px) {
-  .hero-image {
-    background-image: url(img/desk.jpg);
+  p {
+    font-size: 14px;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 28px;
   }
 
-  /* Hero text subtitle */
-  h5 {
-    font-size: 1.2em;
+  /* Applies to hero image subtitle */
+  .header-subheading {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 25px;
   }
 
   .about-title {
+    font-size: 25px;
     /* Decreases margin in main CSS, 1.83 on top, 1 and bottom */
     margin: 1em 0 0.5em 0;
+  }
+
+  /* Applies to (h4) about section subheadings */
+  .about-subheader {
+    /* Default is 20px */
+    font-size: 17px;
   }
 
   .about-text {
@@ -264,6 +283,58 @@ input[type=text], input[type=email], .message-box {
   }
 
   .portrait {
+    /* 400px by default */
     height: 250px;
+  }
+
+  /* Class given to "coming soon" project placeholder. Hiding since has no aesthetic purpose in single-column layout */
+  .coming-soon {
+    display: none;
+  }
+}
+
+/* Tablets/small screens */
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  /* Applies to (h2) hero image subtitle */
+  .header-subheading {
+    /* Default is 20px */
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 27px;
+  }
+
+  .about-title {
+    font-size: 27px;
+  }
+
+  /* Applies to (h4) about section subheadings */
+  .about-subheader {
+    /* Default is 20px */
+    font-size: 16px;
+  }
+
+  .portrait {
+    height: 300px;
+  }
+}
+
+/* Small laptops/medium screens */
+@media screen and (min-width: 992px) {
+  .portrait {
+    height: 350px;
+  }
+}
+
+/* Regular and large laptops, desktops/large screens */
+@media screen and (min-width: 1200px) {
+  .portrait {
+    /* Image is 800 x 800 */
+    height: 425px;
   }
 }

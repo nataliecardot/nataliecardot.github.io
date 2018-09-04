@@ -21,9 +21,9 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/logo-teal-favicon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="">
+    <!-- Google Fonts API provides regular version of requested fonts by default. To request other styles or weights, append a colon (:) to the name of the font, followed by list of styles or weights separated by commas -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:Medium" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -59,10 +59,7 @@
             <div class="hero-image">
               <div class="hero-text text-white">
                 <h1>Natalie Cardot</h1>
-                <h5>Aspiring  Web<br>  Developer</h5>
-                <form action="mailto:nataliecardot@gmail.com" method="post" enctype="text/plain">
-                  <button class="btn btn-dark btn-top hero-contact">Contact Me</button>
-                </form>
+                <h2 class="header-subheading">Aspiring  web developer</h2>
               </div>
             </div>
           </div>
@@ -70,7 +67,7 @@
         <section id="about">
           <div class="row bg">
             <div class="col">
-              <h2 class="about-title">About</h2>
+              <h3 class="about-title">About</h3>
             </div>
           </div>
           <div class="row bg">
@@ -79,20 +76,19 @@
             </div>
             <div class="col-md-7 about-text">
               <p>Since finding my passion—web development—in early 2018, I've been building on my knowledge and practicing daily.</p>
-              <!-- text-info class is from Bootstrap and makes text teal -->
-              <p>Check out my <a href="https://medium.com/@nataliecardot" target="_blank" class="text-info">tutorials</a> on Medium and completed #100daysOfCode challenge <a href="https://github.com/nataliecardot/100-days-of-code/blob/master/r1-log.md" target="_blank" class="text-info">log</a>.</p>
+              <p>Check out my <a href="https://medium.com/@nataliecardot" target="_blank">tutorials</a> on Medium and completed #100daysOfCode challenge <a href="https://github.com/nataliecardot/100-days-of-code/blob/master/r1-log.md" target="_blank" class="text-info">log</a>.</p>
               <p>When I'm not practicing coding, I'm usually listening to podcasts or learning languages. As a resident of Seattle, I also love getting outside to enjoy all the Pacific Northwest has to offer.<p>
-              <h5>Education</h5>
+              <h4 class="about-subheader">Education</h4>
               <p><strong>Udacity</strong> Front-End Web Developer Nanodegree, expected completion October 2018
               <p><strong>University of British Columbia</strong> Bachelor of Arts, Geography, 2015</p>
-              <h5>Skills/Experience</h5>
+              <h4 class="about-subheader">Skills/Experience</h4>
               <ul>
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>CSS Grid</li>
                 <li>Flexbox</li>
-                <li>JavaScript (familiar with ES6/ES7 features)</li>
-                <li>JQuery</li>
+                <li>ES6, ES7</li>
+                <li>jQuery</li>
                 <li>Bootstrap 4</li>
                 <li>GitHub and Git</li>
                 <li>Jasmine testing</li>
@@ -103,7 +99,7 @@
         </section>
         <section id="portfolio" class="row portfolio">
           <div class="col-sm-12">
-            <h2>Portfolio</h2>
+            <h3 class="section-title">Portfolio</h3>
           </div>
 
           <div class="col-lg-4 col-sm-6 portfolio-item">
@@ -187,7 +183,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item mx-auto">
+          <div class="col-lg-4 col-sm-6 portfolio-item mx-auto coming-soon">
             <div class="card h-100">
               <img class="card-img-top" src="img/coming-soon.jpg" alt="Coming soon"></a>
               <div class="card-body d-flex flex-column">
@@ -197,11 +193,12 @@
             </div>
           </div>
 
-          <!-- To add images: from full screen with f11, Ctrl + PrtScrn, paste into Photoshop (onto new 1920 x 1080 file), save in website folder, use crop with ratio of 7 x 4, then save as 700 x 400 jpg, place in img folder of site repo folder -->
+        <!-- To add images: from full screen with f11, Ctrl + PrtScrn, paste into Photoshop (onto new 1920 x 1080 file), save in website folder, use crop with ratio of 7 x 4, then save as 700 x 400 jpg, place in img folder of site repo folder -->
         </section>
+
         <section id="contact" class="row contact bg">
           <div class="col">
-            <h2>Contact</h2>
+            <h3 class="section-title">Contact</h3>
             <p>Have a question or want to work together?</p>
             <form action="mailto:nataliecardot@gmail.com" method="post" enctype="text/plain">
               <div class="form-group">
