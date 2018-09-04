@@ -361,6 +361,10 @@ input[type=text], input[type=email], .message-box {
     height: 350px;
     margin-top: 7em;
   }
+
+  .coming-soon {
+    display: inline;
+  }
 }
 
 /* Regular and large laptops, desktops/large screens */
@@ -399,5 +403,9 @@ input[type=text], input[type=email], .message-box {
     /* Image is 800 x 800 */
     height: 400px;
     margin: 5em 0 0 1em;
+  }
+
+  .coming-soon {
+    display: inline;
   }
 }
