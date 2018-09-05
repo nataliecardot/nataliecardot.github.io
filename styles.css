@@ -142,42 +142,12 @@ h1 {
   margin-bottom: 2em;
 }
 
-/* Applies to message box in form */
-.message-box {
-  margin-top: 1.5em;
-  /* Disables default textarea resizing handles */
-  resize: none;
-  height: 6em;
-}
-
-/* Applies to input box for email */
 .email {
-  margin-top: 1.5em;
-}
-
-input[type=text], input[type=email], .message-box {
-  /* matches row background color for all input boxes */
-  background-color: WhiteSmoke;
-  width: 50%;
-  margin: 0 auto;
-  border: 1px solid #888;
-  border-radius: 0.2em;
-  /* Order: top/bottom, right/left. Right/left padding adds space between text and border of input (without it, it touches the left edge) */
-  padding: 10px 0.75em;
-}
-
-/* Remove default box shadow on contact section input boxes, change outline from blue to turquoise to match other page colors */
-.form-control:focus {
-  box-shadow: none;
-  border: 1px solid #17a2b8;
-}
-
-.form-btn {
-  /* Shorthand: top, horizontal (left and right), bottom */
-  margin: 2em auto 0;
-  text-align: right;
-  /* Matches inputs */
-  width: 50%;
+  font-size: 25px;
+  color: #17a2b8;
+  text-align: center;
+  font-weight: 500;
+  margin: 1.5em 0 0.75em 0;
 }
 
 /* Shows "X" in place of navbar hamburger icon when clicked */
