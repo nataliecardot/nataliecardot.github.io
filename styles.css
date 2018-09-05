@@ -33,6 +33,11 @@ h1 {
   margin: 0 0 1em;
 }
 
+/* Prevents link color from changing to dark blue on hover (just an underline appears) */
+a:hover {
+  color: #17a2b8;
+}
+
 /* Applies to portfolio and contact section titles (h3 headings) */
 .section-title {
   font-family: "Raleway", sans-serif;
@@ -143,7 +148,6 @@ h1 {
 }
 
 .email {
-  font-size: 25px;
   color: #17a2b8;
   text-align: center;
   font-weight: 500;
@@ -246,10 +250,6 @@ h1 {
     padding: 0 2em;
   }
 
-  input[type=text], input[type=email], .message-box, .form-btn {
-    width: 80%;
-  }
-
   .portrait {
     height: 250px;
   }
@@ -257,6 +257,10 @@ h1 {
   /* Class given to "coming soon" project placeholder. Hiding since has no aesthetic purpose in single-column layout */
   .coming-soon {
     display: none;
+  }
+
+  .email {
+    font-size: 18px;
   }
 }
 
@@ -297,6 +301,10 @@ h1 {
   .coming-soon {
     display: none;
   }
+
+  .email {
+    font-size: 20px;
+  }
 }
 
 /* Small laptops/medium screens. Point at which Bootstrap columns quit stacking */
@@ -334,6 +342,10 @@ h1 {
 
   .coming-soon {
     display: inline;
+  }
+
+  .email {
+    font-size: 23px;
   }
 }
 
@@ -377,5 +389,9 @@ h1 {
 
   .coming-soon {
     display: inline;
+  }
+
+  .email {
+    font-size: 25px;
   }
 }
