@@ -165,16 +165,22 @@ button:hover {
 
 /* Mobile phones/extra small screens */
 @media screen and (max-width: 767px) {
+  .mobile-message {
+    display: block;
+  }
+
+  .group-to-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-35%);
+  }
+
   p {
     text-align: center;
     font-size: 16px;
-    /* Default: left and right margin of 1em; */
-    margin: 0 2.5em;
-    padding-top: 14em;
-  }
-
-  .mobile-message {
-    display: block;
+    /* Left and right margin of 1.9em set in main CSS */
+    margin: 0 auto;
+    width: 70%;
   }
 
   .mobile-message-image {
@@ -193,16 +199,22 @@ button:hover {
 
 /* Tablets in portrait view */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .mobile-message {
+    display: block;
+  }
+
+  .group-to-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-35%);
+  }
+
   p {
     text-align: center;
     font-size: 30px;
-    /* Default: left and right margin of 1em; */
-    margin: 0 4em;
-    padding-top: 12em;
-  }
-
-  .mobile-message {
-    display: block;
+    /* Left and right margin of 1.9em set in main CSS */
+    margin: 0 auto;
+    width: 70%;
   }
 
   .mobile-message-image {
@@ -221,16 +233,22 @@ button:hover {
 
 /* Tablets in landscape view */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .mobile-message {
+    display: block;
+  }
+
+  .group-to-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-30%);
+  }
+
   p {
     text-align: center;
     font-size: 30px;
-    /* Default: left and right margin of 1em; */
-    margin: 0 8em;
-    padding-top: 9em;
-  }
-
-  .mobile-message {
-    display: block;
+    /* Left and right margin of 1.9em set in main CSS */
+    margin: 0 auto;
+    width: 70%;
   }
 
   .mobile-message-image {
