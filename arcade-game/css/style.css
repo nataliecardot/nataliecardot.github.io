@@ -191,7 +191,7 @@ button:hover {
   }
 }
 
-/* Tablets */
+/* Tablets in portrait view */
 @media screen and (max-width: 1024px) {
   p {
     text-align: center;
@@ -219,7 +219,7 @@ button:hover {
   }
 }
 
-/* Tablets */
+/* Tablets in landscape view */
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   p {
     text-align: center;
