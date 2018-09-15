@@ -18,6 +18,12 @@ html, body {
   color: #cf3c3c;
 }
 
+.mobile-message {
+  background-color: #fff;
+  height: 100vh;
+  display: none;
+}
+
 p {
   font-size: 1.2em;
   margin-left: 1.9em;
@@ -155,4 +161,88 @@ button:hover {
 
 .char-selector img {
   width: 50px;
+}
+
+/* Mobile phones/extra small screens */
+@media screen and (max-width: 767px) {
+  p {
+    text-align: center;
+    font-size: 18px;
+    /* Default: left and right margin of 1em; */
+    margin: 0 2.5em;
+    padding-top: 14em;
+  }
+
+  .mobile-message {
+    display: block;
+  }
+
+  .mobile-message-image {
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .info-panel {
+    display: none;
+  }
+
+  .canvas {
+    display: none;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  p {
+    text-align: center;
+    font-size: 30px;
+    /* Default: left and right margin of 1em; */
+    margin: 0 4em;
+    padding-top: 12em;
+  }
+
+  .mobile-message {
+    display: block;
+  }
+
+  .mobile-message-image {
+    width: 20%;
+    margin: 0 auto;
+  }
+
+  .info-panel {
+    display: none;
+  }
+
+  .canvas {
+    display: none;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  p {
+    text-align: center;
+    font-size: 30px;
+    /* Default: left and right margin of 1em; */
+    margin: 0 8em;
+    padding-top: 9em;
+  }
+
+  .mobile-message {
+    display: block;
+  }
+
+  .mobile-message-image {
+    width: 15%;
+    margin: 0 auto;
+  }
+
+  .info-panel {
+    display: none;
+  }
+
+  .canvas {
+    display: none;
+  }
 }
