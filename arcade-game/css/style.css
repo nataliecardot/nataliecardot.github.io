@@ -167,7 +167,7 @@ button:hover {
 @media screen and (max-width: 767px) {
   p {
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     /* Default: left and right margin of 1em; */
     margin: 0 2.5em;
     padding-top: 14em;
@@ -192,7 +192,7 @@ button:hover {
 }
 
 /* Tablets in portrait view */
-@media screen and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   p {
     text-align: center;
     font-size: 30px;
@@ -220,7 +220,7 @@ button:hover {
 }
 
 /* Tablets in landscape view */
-@media screen and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   p {
     text-align: center;
     font-size: 30px;
