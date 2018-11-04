@@ -264,7 +264,7 @@ a:hover {
   }
 }
 
-/* Tablets/small screens */
+/* Tablets */
 @media screen and (min-width: 768px) {
   p, li {
     font-size: 14px;
@@ -297,9 +297,8 @@ a:hover {
     margin-top: 4em;
   }
 
-  /* Class given to "coming soon" project placeholder. Hiding since has no aesthetic purpose in single-column layout */
   .coming-soon {
-    display: none;
+    display: inline;
   }
 
   .email {
