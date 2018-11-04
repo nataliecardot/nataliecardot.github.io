@@ -97,8 +97,6 @@ a:hover {
 
 .about-text {
   text-align: left;
-  padding-right: 5em;
-  margin-bottom: 2.4em;
 }
 
 .portfolio {
@@ -232,7 +230,6 @@ a:hover {
   .about-text {
     font-size: 15px;
     padding: 1.4em;
-    /* Removes margin added in main CSS */
     margin-bottom: 0;
     margin-left: 5px;
   }
@@ -283,18 +280,27 @@ a:hover {
     font-size: 27px;
   }
 
-  .about-title {
-    font-size: 27px;
-  }
-
   /* Applies to (h4) about section subheadings */
   .about-subheader {
     font-size: 16px;
   }
 
+  .about-title {
+    font-size: 27px;
+    margin: 1.5em;
+  }
+
   .portrait {
-    height: 290px;
-    margin-top: 4em;
+    height: 350px;
+    margin-bottom: 2em;
+  }
+
+  .about-text {
+    /* margin-bottom: 2em; */
+    width: 75%;
+    margin: auto;
+    /* By placing this after margin: auto, both styles apply at once. If placed above, does nothing */
+    margin-bottom: 2em;
   }
 
   .coming-soon {
@@ -374,6 +380,10 @@ a:hover {
   /* Applies to (h4) about section subheadings */
   .about-subheader {
     font-size: 18px;
+  }
+
+  .about-text {
+    margin-bottom: 2.4em;
   }
 
   .portrait {
