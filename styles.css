@@ -64,6 +64,14 @@ a:hover {
   margin: 2em 0 1em 0;
 }
 
+.card:hover {
+  /* Increases card size by 1.1x original size */
+  transform: scale(1.1);
+  /* offset y, offset x, blur radius, spread radius */
+  box-shadow: 12px 14px 17px 7px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
 /* Applies to text in project descriptions */
 .card-text {
   font-size: 0.8em;
@@ -197,7 +205,7 @@ a:hover {
 
 /* MEDIA QUERIES */
 
-/* Special styling for screens up to 767px wide (landscape phones) */
+/* Special styling for viewports up to 767px wide (landscape phones) */
 @media screen and (max-width: 767px) {
   p, li {
     font-size: 14px;
@@ -340,9 +348,14 @@ a:hover {
     font-size: 18px;
   }
 
+  .about-text p {
+    width: 94%;
+  }
+
   .portrait {
     height: 350px;
     margin-top: 7em;
+    margin-left: 14px;
   }
 
   .coming-soon {
