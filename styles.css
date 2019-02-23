@@ -29,8 +29,42 @@ h1 {
 
 /* Applies to (h2) hero image subtitle */
 .header-subheading {
-  /* Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
-  margin: 0 0 1em;
+  /* Ensures content is not revealed until the animation (hides letters to right of blinking text cursor; otherwise they move in from the right) */
+  overflow: hidden;
+  /* Typing animation based on CSS-Tricks tutorial https://css-tricks.com/snippets/css/typewriter-effect/ */
+  border-right: 0.13em solid #666; /* Typewriter cursor */
+  white-space: nowrap; /* Keeps content on single line */
+  margin: 0 auto; /* Scrolling effect; centers text as it appears */
+  letter-spacing: 0.12em;
+  animation: typing 3.5s steps(40), blink-caret 0.75s steps(1) infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* Text cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #666;
+  }
+}
+
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
 
 /* Prevents link color from changing to dark blue on hover (just an underline appears) */
@@ -80,7 +114,7 @@ h1:hover, h2:hover, h3:hover, p:hover, .about-text:hover {
 }
 
 .hero-image {
-  background-image: url(img/sequins.jpg);
+  background-image: url(img/plant.jpg);
   /* Sets height to full height (100%) of viewport */
   height: 100vh;
   /* Ensures background image spans full width of viewport */
@@ -88,7 +122,6 @@ h1:hover, h2:hover, h3:hover, p:hover, .about-text:hover {
   /* Aligns image to center of viewport */
   background-position: center;
   background-repeat: no-repeat;
-  /* For parallax scrolling effect */
   background-attachment: fixed;
   /* Enables flex layout */
   display: flex;
