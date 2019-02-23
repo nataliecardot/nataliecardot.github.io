@@ -64,9 +64,19 @@ a:hover {
   margin: 2em 0 1em 0;
 }
 
+/* Prevent text cursor from appearing */
+h1:hover, h2:hover, h3:hover, p:hover, .about-text:hover {
+  cursor: default;
+}
+
 /* Applies to text in project descriptions */
 .card-text {
   font-size: 0.8em;
+}
+
+/* Prevent text cursor from appearing */
+.card-text:hover {
+  cursor: default;
 }
 
 .hero-image {
