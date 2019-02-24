@@ -237,6 +237,15 @@ h1:hover, h2:hover, h3:hover, h4.about-subheader:hover, p:hover, .about-text:hov
 
 /* Special styling for viewports up to 767px wide (landscape phones) */
 @media screen and (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+
+  /* Since no navbar on mobile, centering hero image text normally */
+  .hero-text {
+    margin: 0 auto;
+  }
+
   p, li {
     font-size: 14px;
   }
