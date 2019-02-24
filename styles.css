@@ -30,7 +30,7 @@ h1 {
   border-right: 0.15em solid #fff; /* Typewriter cursor */
   white-space: nowrap; /* Keeps content on single line */
   margin: 0 auto; /* Scrolling effect; centers text as it appears */
-  letter-spacing: 0.11em;
+  letter-spacing: 0.15em;
   animation: typing 3.5s steps(40), blink-caret 0.75s steps(1) infinite;
 }
 
