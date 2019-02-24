@@ -6,7 +6,8 @@ body {
 .nav-link {
   /* Decreases Boostrap default top/bottom padding by 0.25rem */
   padding: 0.25rem 1rem;
-  font-size: 0.9em;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
 }
 
 .navbar {
