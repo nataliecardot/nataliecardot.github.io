@@ -3,12 +3,6 @@ body {
   text-align: center;
 }
 
-/* Navbar logo */
-.navbar-brand img {
-  height: 25px;
-  width: auto;
-}
-
 .nav-link {
   /* Decreases Boostrap default top/bottom padding by 0.25rem */
   padding: 0.25rem 1rem;
@@ -17,7 +11,7 @@ body {
 
 .navbar {
   /* Decreased line height makes navbar shorter */
-  line-height: 1.2em;
+  line-height: 0.8em;
 }
 
 /* Applies to full name in hero image */
@@ -32,17 +26,17 @@ h1 {
   /* Ensures content is not revealed until the animation (hides letters to right of blinking text cursor; otherwise they move in from the right) */
   overflow: hidden;
   /* Typing animation based on CSS-Tricks tutorial https://css-tricks.com/snippets/css/typewriter-effect/ */
-  border-right: 0.13em solid #666; /* Typewriter cursor */
+  border-right: 0.15em solid #fff; /* Typewriter cursor */
   white-space: nowrap; /* Keeps content on single line */
   margin: 0 auto; /* Scrolling effect; centers text as it appears */
-  letter-spacing: 0.12em;
+  letter-spacing: 0.11em;
   animation: typing 3.5s steps(40), blink-caret 0.75s steps(1) infinite;
 }
 
 /* Typing effect */
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 
   to {
@@ -57,7 +51,7 @@ h1 {
   }
 
   50% {
-    border-color: #666;
+    border-color: #fff;
   }
 }
 
@@ -114,7 +108,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, p:hover, .about-text:hover {
 }
 
 .hero-image {
-  background-image: url(img/plant.jpg);
+  background-image: url(img/cafe.jpg);
   /* Sets height to full height (100%) of viewport */
   height: 100vh;
   /* Ensures background image spans full width of viewport */
@@ -417,7 +411,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, p:hover, .about-text:hover {
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 43px;
   }
 
   /* Applies to (h2) hero image subtitle */
