@@ -94,7 +94,7 @@ a:hover {
 }
 
 /* Prevent text cursor from appearing */
-h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title {
+h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text {
   cursor: default;
 }
 
@@ -103,13 +103,8 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title {
   font-size: 0.8em;
 }
 
-/* Prevent text cursor from appearing */
-.card-text:hover {
-  cursor: default;
-}
-
 .hero-image {
-  background-image: url(img/cafe.jpg);
+  background-image: url("img/cafe.jpg");
   /* Sets height to full height (100%) of viewport */
   height: 100vh;
   /* Ensures background image spans full width of viewport */
