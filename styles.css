@@ -94,7 +94,7 @@ a:hover {
 }
 
 /* Prevent text cursor from appearing */
-h1:hover, h2:hover, h3:hover, h4:hover, p:hover, .about-text:hover {
+h1:hover, h2:hover, h3:hover, h4.about-subheader:hover, p:hover, .about-text:hover, h4.coming-soon-title:hover {
   cursor: default;
 }
 
