@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <!-- Ensures proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Forces IE 8/9/10 to use its latest rendering engine -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Customer Satisfaction Survey</h1>
+    <p class="description">Tell us about your experience.</p>
+
+    <div class="inner-container">
+      <form>
+
+      <div class="form-item">
+        <!-- label element ties meaning to item and makes form more readable. The for attribute on a label tag explicitly associates that label with form control and is used by screen readers -->
+        <label for="name" class="form-left">* Name:</label>
+        <input autofocus class="form-right" type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-item">
+        <label for="email" class="form-left">* Email:</label>
+        <input type="email" class="form-right" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-item">
+        <label for="number" class="form-left">* Age:</label>
+        <input type="number" class="form-right" id="number" min="1" max="125" placeholder="Enter your age" required>
+      </div>
+
+      <div class="form-item">
+        <!-- ID name of dropdown not ideal here, to distinguish it from other dropdown, but this is just to satisfy FCC test suite requirement -->
+        <label for="current-employment" class="form-left">Which best describes your employment status?</label>
+        <select id="current-employment" name="current-employment" class="dropdown form-right">
+          <option disabled selected="true">Select an option</option>
+          <!-- value attribute indicates what is sent to the server -->
+          <option value="student">Student</option>
+          <option value="full-time">Employed full-time</option>
+          <option value="part-time">Employed part-time</option>
+          <option value="unemployed">Unemployed</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-item">
+        <label for="marital-status" class="form-left">What is your marital status?</label>
+        <select id="marital-status" name="marital-status" class="dropdown form-right">
+          <option disabled selected="true">Select an option</option>
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+          <option value="partnership">In a domestic partnership</option>
+          <option value="divorced">Divorced</option>
+          <option value="separated">Separated</option>
+          <option value="widowed">Widowed</option>
+        </select>
+      </div>
+
+      <div class="form-item">
+        <label class="form-left">How likely are you to recommend our services?</label>
+        <div class="form-right">
+          <div>
+            <!-- To group radio buttons, they must all have the same name value. This allows only one to be selected at a time and applies required to the whole group -->
+            <input name="recommend" class="radio-button" type="radio" id="highly-likely" value="highly likely">
+            <label for="highly-likely">Highly likely</label>
+          </div>
+          <div>
+            <!-- When the form is submitted, the data name/value pair will be recommend=likely -->
+            <input name="recommend" class="radio-button" type="radio" id="likely" value="likely">
+            <label for="likely">Likely</label>
+          </div>
+          <div>
+            <input name="recommend" class="radio-button" type="radio" id="maybe" value="maybe">
+            <label for="maybe">Maybe</label>
+          </div>
+          <div>
+            <input name="recommend" class="radio-button" type="radio" id="unsure" value="unsure">
+            <label for="unsure">Unsure</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-item">
+        <label class="form-left">What can we improve on? (select all that apply)</label>
+        <div class="form-right">
+          <div>
+            <input id="online-experience" type="checkbox" name="improvement" value="online experience" class="checkbox">
+            <label for="online-experience">Online experience</label>
+          </div>
+          <div>
+            <input id="customer-service" type="checkbox" name="improvement" value="customer experience" class="checkbox">
+            <label for="customer-service">Customer service</label>
+          </div>
+          <div>
+            <input id="pricing" type="checkbox" name="improvement" value="pricing" class="checkbox">
+            <label for="pricing">Pricing</label>
+          </div>
+          <div>
+            <input id="hours" type="checkbox" name="improvement" value="hours" class="checkbox">
+            <label for="hours">Hours of availability</label>
+          </div>
+          <div>
+            <input id="other" type="checkbox" name="improvement" value="other" class="checkbox">
+            <label for="other">Other (please describe below)</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-item">
+        <label for="other-description" class="form-left">If you selected "other" as an area of needed improvement above, please describe further.</label>
+        <textarea class="form-right" id="other-description" placeholder="Enter some details"></textarea>
+      </div>
+
+      <div class="form-item">
+        <label for="comment" class="form-left">Any comments or suggestions?</label>
+        <textarea class="form-right" id="comment" placeholder="Enter additional feedback"></textarea>
+      </div>
+
+      <button class="submit-button" type="submit">Submit</button>
+
+      </form>
+    </div>
+  </div> <!-- container -->
+</body>
+</html>
