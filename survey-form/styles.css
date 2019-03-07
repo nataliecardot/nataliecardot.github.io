@@ -19,7 +19,7 @@ body {
 }
 
 /* Needed to center form content (form-left and form-right) */
-.inner-container {
+form {
   /* Centers form content */
   text-align: center;
 }
