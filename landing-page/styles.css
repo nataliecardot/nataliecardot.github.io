@@ -1,0 +1,450 @@
+:root {
+  /* Applying so that 1rem will equal 10px for easier calculation; default font-size in browsers is 16px, and 62.5% of 16px is 10px. 0.1rem now equals 1px, 1.6rem = 16px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Muli, sans-serif;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.logo {
+  height: 4rem;
+  padding: 0.1rem 1.9rem 0 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto 38rem auto auto 42rem auto;
+
+  grid-template-areas:
+    "header header"
+    "image intro"
+    "pricing pricing"
+    "banner banner"
+    "portrait about"
+    "contact contact"
+    "banner2 banner2"
+    "footer footer";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  /* Unlike position: fixed, doesn't overlap content that follows header */
+  position: sticky;
+  /* Needed for use of position: sticky; */
+  top: 0;
+  grid-area: header;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.8rem 0 4.3rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  padding: 0 1.1rem 0 0;
+  font-family: Satisfy, cursive;
+  font-weight: 300;
+  color: #dbb42f;
+}
+
+header p {
+  font-size: 1.8rem;
+  color: #7d7a7a;
+  font-weight: 300;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  /* Removing because it causes whitespace on the side (in mobile view) after adding position: sticky, top: 0, width: 100% to header */
+  margin: 0;
+}
+
+nav ul li {
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  padding: 1.8rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #5c5a5a;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin: 4rem 0 3.5rem 0;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: #737373;
+}
+
+.bouquet {
+  grid-area: image;
+  background-image: url(img/bouquet.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.intro-text {
+  background-color: #faf6dc;
+  grid-area: intro;
+  display: flex;
+  align-items: center;
+  /* Less padding on top and bottom to account for extra space above and below p element */
+  padding: 3rem 5.5rem 3rem 5.5rem;
+}
+
+.intro-text-paragraphs {
+  font-size: 1.75rem;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.pricing {
+  grid-area: pricing;
+  background-color: #faf0f0;
+}
+
+.pricing-levels {
+  margin: 3rem 0 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-level {
+  background-color: #fff;
+  text-align: center;
+  padding: 5rem;
+  margin: 0 1rem;
+}
+
+.pricing-ul-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-level ul {
+  text-align: left;
+}
+
+.pricing button {
+  background-color: #c95572;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1em;
+  height: 4rem;
+  width: 9.6rem;
+  margin: 2.5rem 0 1rem 0;
+  border: none;
+}
+
+.banner {
+  grid-area: banner;
+  background-image: url(img/desk-roses.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner2 {
+  grid-area: banner2;
+  background-image: url(img/holding-hands.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.portrait {
+  grid-area: portrait;
+  background-image: url(img/holding-camera.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.portrait img {
+  max-width: 100%;
+}
+
+.about {
+  grid-area: about;
+  background-color: #faf0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  width: 82%;
+  margin: 0 0 5rem 0;
+  font-weight: 300;
+}
+
+.contact {
+  background-color: #faf6dc;
+  grid-area: contact;
+}
+
+footer {
+  background-color: #f2f2f2;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+footer i {
+  padding: 1.6rem;
+  color: #7d7a7a;
+}
+
+footer p {
+  font-size: 1.6rem;
+  letter-spacing: 0.15rem;
+  /* Same color as for header p, social icons */
+  color: #7d7a7a;
+}
+
+.form-left {
+  display: inline-block;
+  text-align: right;
+  width: 30%;
+  padding-right: 0.9rem;
+  margin-top: 1rem;
+  /* Matches h2 text */
+  color: #737373;
+}
+
+.form-right {
+  display: inline-block;
+  text-align: left;
+  width: 40%;
+  vertical-align: middle;
+}
+
+.form-item {
+  margin: 1.8rem 0;
+}
+
+/* font-family set in body didn't apply; per https://stackoverflow.com/questions/2874813/why-textarea-and-textfield-not-taking-font-family-and-font-size-from-body "browsers render most form elements (textareas, text boxes, buttons, etc) using OS controls or browser controls. So most of the font properties are taken from the theme the OS is currently using" Adding font-family: inherit is workaround */
+input {
+  padding: 1.3rem;
+  border-radius: 0.2rem;
+  border: none;
+  font-family: inherit;
+}
+
+textarea {
+  padding: 1.3rem;
+  height: 15rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-family: inherit;
+}
+
+.contact-button {
+  /* This works because buttons are display: inline-block by default */
+  text-align: center;
+}
+
+form button {
+  background-color: #e2a929;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1em;
+  height: 4rem;
+  width: 9.6rem;
+  margin: 2.5rem 0 4.5rem 0;
+  border: none;
+}
+
+i:hover, button:hover {
+  transform: scale(1.1);
+}
+
+/* Smartphones */
+@media screen and (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 40rem auto auto 50rem auto 50rem auto 42rem auto;
+
+    grid-template-areas:
+      "header"
+      "image"
+      "intro"
+      "pricing"
+      "portrait"
+      "about"
+      "banner"
+      "contact"
+      "banner2"
+      "footer";
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .logo {
+    height: 3.5rem;
+    padding: 0.1rem 1.9rem 0 0;
+  }
+
+  .intro-text {
+    padding: 2rem 4rem 2rem 4rem;
+  }
+
+  .pricing-levels {
+    flex-direction: column;
+  }
+
+  .pricing-levels:last-child {
+    margin-bottom: 4rem;
+  }
+
+  .pricing-level {
+    margin: 1.5rem 4rem;
+  }
+
+  .pricing-level:first-child {
+    margin-top: 0;
+  }
+
+  .about-text {
+    margin-bottom: 3rem;
+  }
+
+  .banner {
+    /* Mobile-only image; better fit */
+    background-image: url(img/couple-heart.jpg);
+    justify-content: center;
+    background-position: center;
+  }
+
+  form {
+    text-align: center;
+  }
+
+  .form-left {
+    width: 85%;
+    padding-right: 0;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .form-right {
+    width: 85%;
+    margin-top: 1.2rem;
+  }
+
+  .form-item {
+    margin: 1rem 0;
+  }
+}
+
+/* Tablets/medium devices */
+@media screen and (max-width: 991px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 55rem auto auto 50rem auto 50rem auto 42rem auto;
+
+    grid-template-areas:
+      "header"
+      "image"
+      "intro"
+      "pricing"
+      "portrait"
+      "about"
+      "banner"
+      "contact"
+      "banner2"
+      "footer";
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .intro-text {
+    padding: 2rem 4rem 2rem 4rem;
+  }
+
+  .pricing-levels {
+    flex-direction: column;
+  }
+
+  .pricing-levels:last-child {
+    margin-bottom: 4rem;
+  }
+
+  .pricing-level {
+    margin: 1.5rem auto;
+    width: 55%;
+  }
+
+  .pricing-level:first-child {
+    margin-top: 0;
+  }
+
+  .about-text {
+    margin-bottom: 3.4rem;
+  }
+
+  .banner {
+    /* Only using this image for mobile, since it fits better */
+    background-image: url(img/couple-heart.jpg);
+    justify-content: center;
+    background-position: center;
+  }
+
+  form {
+    text-align: center;
+  }
+
+  .form-left {
+    width: 85%;
+    padding-right: 0;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .form-right {
+    width: 85%;
+    margin-top: 1.2rem;
+  }
+
+  .form-item {
+    margin: 1rem 0;
+  }
+}
