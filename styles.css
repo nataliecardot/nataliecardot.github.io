@@ -320,7 +320,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
 }
 
 /* Tablets */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   * {
     transform: none;
     box-shadow: none;
