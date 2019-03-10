@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -172,17 +176,27 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
 	color: #17a2b8;
 }
 
-/* Applies to paragraph in contact section */
-.contact p {
-  /* Adds extra space before contact form (default margin-bottom is 1rem [root element em]) */
-  margin-bottom: 2em;
+.fab:hover {
+  transform: scale(1.2);
 }
 
-.email {
-  color: #17a2b8;
-  text-align: center;
-  font-weight: 500;
-  margin: 1.5em 0 0.75em 0;
+.email-button {
+  text-decoration: none;
+  background-color: #17a2b8;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 1.5rem;
+  /* a elements have display: inline by default, but transformable elements can't be display: inline */
+  display: inline-block;
+  margin: 1rem 0 2rem 0;
+}
+
+.email-button:hover {
+  text-decoration: none;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 12px 14px 17px 2px rgba(0, 0, 0, 0.15);
 }
 
 /* Shows "X" in place of navbar hamburger icon when clicked */
