@@ -174,6 +174,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
 .fab:hover, a {
   /* Teal */
 	color: #17a2b8;
+  transform: scale(1.2);
 }
 
 /* Applies to paragraph in contact section */
@@ -247,6 +248,11 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
 
 /* Special styling for viewports up to 767px wide (landscape phones) */
 @media screen and (max-width: 767px) {
+  * {
+    transform: none;
+    box-shadow: none;
+  }
+
   .navbar {
     display: none;
   }
@@ -320,6 +326,11 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
 
 /* Tablets */
 @media screen and (min-width: 768px) {
+  * {
+    transform: none;
+    box-shadow: none;
+  }
+  
   p, li {
     font-size: 14px;
   }
