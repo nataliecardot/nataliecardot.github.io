@@ -1,6 +1,7 @@
-:root {
+html {
   /* Applying so that 1rem will equal 10px for easier calculation; default font-size in browsers is 16px, and 62.5% of 16px is 10px. 0.1rem now equals 1px, 1.6rem = 16px */
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
