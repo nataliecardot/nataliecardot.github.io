@@ -178,11 +178,22 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
   margin-bottom: 2em;
 }
 
-.email {
-  color: #17a2b8;
-  text-align: center;
-  font-weight: 500;
-  margin: 1.5em 0 0.75em 0;
+.email-button {
+  text-decoration: none;
+  background-color: #17a2b8;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 1.5rem;
+  /* a elements have display: inline by default, but transformable elements can't be display: inline */
+  display: inline-block;
+}
+
+.email-button:hover {
+  text-decoration: none;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 12px 14px 17px 2px rgba(0, 0, 0, 0.15);
 }
 
 /* Shows "X" in place of navbar hamburger icon when clicked */
@@ -298,8 +309,8 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
     display: none;
   }
 
-  .email {
-    font-size: 18px;
+  .email-button {
+    font-size: 1.2rem;
   }
 }
 
@@ -396,10 +407,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
     display: inline;
   }
 
-  .email {
-    font-size: 23px;
-  }
-
   .card:hover {
     /* Increases card size by 1.1x original size */
     transform: scale(1.1);
@@ -453,9 +460,5 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
 
   .coming-soon {
     display: inline;
-  }
-
-  .email {
-    font-size: 25px;
   }
 }
