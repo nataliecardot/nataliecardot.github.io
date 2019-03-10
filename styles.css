@@ -174,7 +174,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
 .fab:hover, a {
   /* Teal */
 	color: #17a2b8;
-  transform: scale(1.2);
 }
 
 .fab:hover {
@@ -187,7 +186,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
   padding: 0.5rem 0.7rem;
   border-radius: 0.4rem;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   /* a elements have display: inline by default, but transformable elements can't be display: inline */
   display: inline-block;
   margin: 1rem 0 2rem 0;
