@@ -177,12 +177,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
   transform: scale(1.2);
 }
 
-/* Applies to paragraph in contact section */
-.contact p {
-  /* Adds extra space before contact form (default margin-bottom is 1rem [root element em]) */
-  margin-bottom: 2em;
-}
-
 .email-button {
   text-decoration: none;
   background-color: #17a2b8;
@@ -192,6 +186,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
   font-size: 1.5rem;
   /* a elements have display: inline by default, but transformable elements can't be display: inline */
   display: inline-block;
+  margin: 1rem 0 2rem 0;
 }
 
 .email-button:hover {
@@ -330,7 +325,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card-text
     transform: none;
     box-shadow: none;
   }
-  
+
   p, li {
     font-size: 14px;
   }
