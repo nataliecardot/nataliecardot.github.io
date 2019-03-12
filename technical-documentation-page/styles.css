@@ -82,7 +82,7 @@ main {
   grid-area: main;
   width: 75%;
   margin: 0 auto;
-  padding: 5.5rem 0;
+  padding: 5.5rem 0 4.5rem 0;
 }
 
 main a {
