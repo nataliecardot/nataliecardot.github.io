@@ -46,7 +46,6 @@ h1 {
 }
 
 i {
-  padding: 0 0 2.5rem 3.75rem;
   /* color: rgba(95, 176, 199, 1); */
   color: #eeaa7b;
 }
@@ -130,17 +129,34 @@ code:hover {
     grid-template-rows: auto auto;
 
     grid-template-areas:
-      "nav nav"
-      "main main"
+      "nav"
+      "main"
   }
 
   nav {
     grid-area: nav;
-    max-height: 30rem;
+    max-height: 20rem;
     overflow: scroll;
+    text-align: center;
+  }
+
+  .nav-link-container {
+    padding: 0.3rem 0;
+  }
+
+  h1 {
+    padding: 2rem 0 0 0;
   }
 
   pre code {
     width: 100%;
+  }
+}
+
+/* Tablets/medium devices */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    /* Just increasing sidebar nav from 20 to 30% width */
+    grid-template-columns: 30% 1fr;
   }
 }
