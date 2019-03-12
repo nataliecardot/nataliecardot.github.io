@@ -1,0 +1,146 @@
+html {
+  /* Applying so that 1rem will equal 10px for easier calculation; default font-size in browsers is 16px, and 62.5% of 16px is 10px. 0.1rem now equals 1px, 1.6rem = 16px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+}
+
+p, li {
+  line-height: 2.58rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 1fr;
+
+  grid-template-areas:
+    "nav main"
+    "nav main"
+}
+
+/* Tells browser to account for any border and padding in the values specified for an element's width and height */
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  grid-area: nav;
+  /* Alternative to position: fixed that is compatible with CSS grid to keep navbar in place. Doesn't remove anything from document flow */
+  position: sticky;
+  /* Keeps it at top of screen at all times */
+  top: 0;
+  height: 100vh;
+  background: linear-gradient(#f4f4f4, #cbcbcb);
+}
+
+h1 {
+  font-family: Raleway, sans-serif;
+  padding: 3rem 0 0 3.75rem;
+  margin-top: 0;
+}
+
+i {
+  padding: 0 0 2.5rem 3.75rem;
+  /* color: rgba(95, 176, 199, 1); */
+  color: #eeaa7b;
+}
+
+/* Removing top margin of first h2 element in main */
+section:first-of-type h2 {
+  margin-top: 0;
+}
+
+h2 {
+  font-family: Raleway, sans-serif;
+  margin-top: 5rem;
+}
+
+.nav-link {
+  width: 100%;
+  color: black;
+}
+
+.nav-link-container {
+  padding: 0.5rem 0 0.5rem 3.75rem;
+  margin: 0.5rem 0;
+}
+
+.nav-link-container:hover {
+  background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(95, 176, 199, 1) 100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  grid-area: main;
+  padding: 3rem;
+}
+
+main a {
+  color: #5eb0c7;
+  font-weight: 400;
+}
+
+/* Affects the multi-line code snippets only */
+pre code {
+  /* Needed for background/transition compatibility; without it, each line is separated */
+  display: block;
+  /* Displays scrollbar if needed. By default overflow is set to visible (not clipped) */
+  overflow: auto;
+  width: 60%;
+  line-height: 2;
+  background: linear-gradient(to right, rgba(147, 206, 222, 1) 0%, rgba(117, 189, 209, 1) 41%, rgba(95, 176, 199, 1) 100%);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  margin: 1.5rem 0;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+
+/* Negation pseudo-class used to select code elements that are not a direct child of pre element; used to apply special styling to single lines of code without affecting that applied to code elements that are descendants of pre (i.e., multi-line code) */
+:not(pre) > code {
+  background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(95, 176, 199, 1) 100%);
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+
+/* Applies to both single and multi-line code snippets */
+code:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(33, 33, 33, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    grid-template-areas:
+      "nav nav"
+      "main main"
+  }
+
+  nav {
+    grid-area: nav;
+    max-height: 30rem;
+    overflow: scroll;
+  }
+
+  pre code {
+    width: 100%;
+  }
+}
