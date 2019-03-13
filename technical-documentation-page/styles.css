@@ -155,6 +155,10 @@ code:hover {
   pre code {
     width: 100%;
   }
+
+  main {
+    width: 90%;
+  }
 }
 
 /* Tablets/medium devices */
@@ -162,5 +166,9 @@ code:hover {
   .container {
     /* Just increasing sidebar nav from 20 to 30% width */
     grid-template-columns: 30% 1fr;
+  }
+
+  main {
+    width: 80%;
   }
 }
