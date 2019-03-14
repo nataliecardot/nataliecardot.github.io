@@ -113,7 +113,7 @@ pre code {
   background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(95, 176, 199, 1) 100%);
   color: #fff;
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.35rem;
   transition-property: transform, box-shadow;
   transition-duration: 0.25s;
   transition-timing-function: linear;
@@ -125,6 +125,10 @@ pre code {
 code:hover {
   transform: scale(1.01);
   box-shadow: 0 0 20px rgba(33, 33, 33, 0.5);
+}
+
+.menu-btn {
+  display: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -139,8 +143,71 @@ code:hover {
 
   nav {
     grid-area: nav;
-    max-height: 16rem;
-    overflow: scroll;
+    height: auto;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-btn {
+    display: inline-block;
+    border: 0;
+    padding: 1.2rem;
+    background-color: #777;
+    margin: 1.5rem 2rem 1.5rem 0;
+  }
+
+  .menu-container {
+    position: relative;
+    display: inline-block;
+    width: 2.8rem;
+    height: 2rem;
+    vertical-align: middle;
+  }
+
+  .menu-container .bar1 {
+    top: 0;
+  }
+
+  .menu-container .bar2 {
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  .menu-container .bar3 {
+    bottom: 0;
+  }
+
+  .bar {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0.4rem;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    background-color: #fff;
+  }
+
+  /* .change: classes toggled on click of menu button */
+  .change .bar1 {
+    transform: translateY(8px) translateX(0) rotate(45deg);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    transform: translateY(-8px) translateX(0) rotate(-45deg);
+  }
+
+  .nav-links {
+    display: none;
     text-align: center;
   }
 
@@ -149,15 +216,23 @@ code:hover {
   }
 
   h1 {
-    padding: 2rem 0 0 0;
-  }
-
-  pre code {
-    width: 100%;
+    /* Allows it to be on same line as menu button */
+    display: inline-block;
+    margin: 0 0 0 2rem;
+    padding: 0;
   }
 
   main {
     width: 90%;
+    padding: 2rem 0;
+  }
+
+  h2 {
+    margin-top: 3rem;
+  }
+
+  pre code {
+    width: 100%;
   }
 }
 
@@ -166,9 +241,5 @@ code:hover {
   .container {
     /* Just increasing sidebar nav from 20 to 30% width */
     grid-template-columns: 30% 1fr;
-  }
-
-  main {
-    width: 80%;
   }
 }
