@@ -41,7 +41,7 @@ nav {
 
 h1 {
   font-family: Raleway, sans-serif;
-  padding: 6rem 0 0 6rem;
+  padding: 5rem 0 0 5rem;
   margin-top: 0;
 }
 
@@ -62,11 +62,11 @@ h2 {
 
 .nav-link {
   width: 100%;
-  color: black;
+  color: #000;
 }
 
 .nav-link-container {
-  padding: 0.5rem 0 0.5rem 6rem;
+  padding: 0.5rem 0 0.5rem 5rem;
   margin: 0.5rem 0;
 }
 
@@ -82,7 +82,7 @@ main {
   grid-area: main;
   width: 75%;
   margin: 0 auto;
-  padding: 6rem 0 4.5rem 0;
+  padding: 5rem 0 4.5rem 0;
 }
 
 main a {
@@ -241,5 +241,17 @@ code:hover {
   .container {
     /* Just increasing sidebar nav from 20 to 30% width */
     grid-template-columns: 30% 1fr;
+  }
+
+  .nav-link-container {
+    padding-left: 4rem;
+  }
+
+  h1 {
+    padding: 4rem 0 0 4rem;
+  }
+
+  main {
+    padding: 4rem 0 4.5rem 0;
   }
 }
