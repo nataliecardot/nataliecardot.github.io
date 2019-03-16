@@ -177,13 +177,17 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 }
 
 .about-text .fas {
-  color: #c7c7c7;
+  color: #8e8e8e;
   float: right;
 }
 
 .card .fas {
   margin-right: 0.3rem;
-  color: #c7c7c7;
+  color: #d7d3c6;
+}
+
+.contact .far {
+  color: #8e8e8e;
 }
 
 .fab:hover {
@@ -199,7 +203,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   font-size: 1.2rem;
   /* a elements have display: inline by default, but transformable elements can't be display: inline */
   display: inline-block;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0 0 0;
 }
 
 .email-button:hover {
