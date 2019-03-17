@@ -313,8 +313,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 
   .portfolio {
-    /* Since class "portfolio-item" has bottom margin of 2em, decreasing this section's bottom margin by that amount */
-    padding: 2em 2em 0 2em;
+    padding: 2em 0.5em 0 0.5em
   }
 
   .contact {
