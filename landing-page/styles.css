@@ -111,6 +111,7 @@ h2 {
   grid-area: intro;
   display: flex;
   align-items: center;
+  justify-content: center;
   /* Less padding on top and bottom to account for extra space above and below p element */
   padding: 5rem 5.5rem 5rem 5.5rem;
 }
@@ -479,5 +480,56 @@ i:hover, button:hover {
 
   .form-item {
     margin: 1rem 0;
+  }
+}
+
+/* Very large laptops/computers */
+@media screen and (min-width: 1800px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 65rem auto 70rem 70rem auto 66rem auto;
+
+    grid-template-areas:
+      "header header"
+      "image intro"
+      "pricing pricing"
+      "banner banner"
+      "portrait about"
+      "contact contact"
+      "banner2 banner2"
+      "footer footer";
+  }
+
+  .intro-text {
+    padding: 3rem;
+  }
+
+  .intro-text-paragraphs {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.2rem;
+  }
+
+  .about-text {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .pricing h2, .contact h2 {
+    margin-top: 12rem;
+  }
+
+  .pricing-levels {
+    margin: 6rem 0 10rem 0;
+  }
+
+  form button {
+    margin-bottom: 12rem;
   }
 }
