@@ -100,9 +100,14 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   cursor: default;
 }
 
-/* To match that of ul */
-.resume-link {
-  margin: 1.2rem 0 0 1.5rem;
+.resume-link:hover {
+  /* Prevent underline */
+  text-decoration: none;
+}
+
+/* Have to set this because set cursor to default above */
+.resume-link p:hover {
+  cursor: pointer;
 }
 
 /* Applies to text in project descriptions */
