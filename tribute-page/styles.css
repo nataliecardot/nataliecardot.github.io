@@ -119,8 +119,25 @@ ul {
     width: 95%;
   }
 
+  .portrait img {
+    width: 100%;
+    margin: 0 auto 1em auto;
+  }
+
+  .portrait.card-body {
+    padding: 0 0 1em 0;
+  }
+
   h1 {
     font-size: 2em;
+  }
+
+  h2 {
+    line-height: 1.7;
+    font-size: 1em;
+    width: 80%;
+    letter-spacing: 1px;
+    margin: 1em auto 0 auto;
   }
 
   h3 {
