@@ -5,6 +5,21 @@ body {
 
 h1 {
   text-transform: uppercase;
+  font-size: 2em;
+}
+
+h2 {
+  margin-top: 1em;
+  font-size: 1.1em;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 2em;
 }
 
 .jumbotron {
@@ -18,7 +33,8 @@ img {
 
 .summary {
   text-align: left;
-  margin: 2em 2em;
+  margin: 3em auto;
+  width: 55%;
 }
 
 img.works {
@@ -93,4 +109,31 @@ ul {
   text-align: left;
   margin-bottom: 5em;
   list-style: none;
+}
+
+
+/* Special styling for viewports up to 767px wide */
+@media screen and (max-width: 767px) {
+  .summary {
+    width: 95%;
+  }
+
+  blockquote {
+    margin: 3em auto 2em auto;
+    width: 80%;
+  }
+
+  h3 {
+    width: 85%;
+  }
+
+  hr.bottom {
+    margin-bottom: 3em;
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 1.3em auto;
+    width: 90%;
+  }
 }
