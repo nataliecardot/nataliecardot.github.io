@@ -312,6 +312,10 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
     margin-left: 5px;
   }
 
+  .about-text .fas {
+    display: none;
+  }
+
   .portfolio {
     padding: 2em 0.5em 0 0.5em
   }
