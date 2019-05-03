@@ -176,7 +176,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 /* Applies to Font Awesome social icons */
 .fab {
   margin: 0 0.5em;
-  color: white;
+  color: #fff;
 }
 
 .fab:hover, a {
@@ -189,9 +189,10 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   float: right;
 }
 
+/* Applies to tags icon */
 .card .fas {
   margin-right: 0.15rem;
-  color: #c9c3ae;
+  color: #9a9a9a;
 }
 
 .contact .far {
