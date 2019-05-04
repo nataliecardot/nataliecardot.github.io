@@ -482,7 +482,7 @@ i:hover, button:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1799px) {
   form {
     width: 50%;
   }
