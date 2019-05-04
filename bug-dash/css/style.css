@@ -264,3 +264,18 @@ button:hover {
     display: none;
   }
 }
+
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+  .canvas {
+    padding-top: 5em;
+    margin-left: 30em;
+  }
+}
+
+/* Very large laptops/computers */
+@media screen and (min-width: 1600px) {
+  .canvas {
+    padding-top: 6.5em;
+    margin-left: 40em;
+  }
+}
