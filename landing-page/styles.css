@@ -128,7 +128,7 @@ h2 {
 }
 
 .pricing-levels {
-  margin: 3rem 0 5rem 0;
+  margin: 3rem 0 7rem 0;
   display: flex;
   justify-content: center;
 }
@@ -223,6 +223,8 @@ h2 {
 .contact {
   background-color: #faf6dc;
   grid-area: contact;
+  /* To center form */
+  text-align: center;
 }
 
 footer {
@@ -247,10 +249,21 @@ footer p {
   color: #7d7a7a;
 }
 
+form {
+  display: inline-block;
+  width: 70%;
+}
+
+.form-item {
+  margin: 1.8rem 0;
+  display: flex;
+}
+
 .form-left {
   display: inline-block;
   text-align: right;
-  width: 30%;
+  width: 15%;
+  /* float: left; */
   padding-right: 0.9rem;
   margin-top: 1rem;
   /* Matches h2 text */
@@ -260,12 +273,8 @@ footer p {
 .form-right {
   display: inline-block;
   text-align: left;
-  width: 40%;
+  width: 85%;
   vertical-align: middle;
-}
-
-.form-item {
-  margin: 1.8rem 0;
 }
 
 /* font-family set in body didn't apply; per https://stackoverflow.com/questions/2874813/why-textarea-and-textfield-not-taking-font-family-and-font-size-from-body "browsers render most form elements (textareas, text boxes, buttons, etc) using OS controls or browser controls. So most of the font properties are taken from the theme the OS is currently using" Adding font-family: inherit is workaround */
@@ -286,7 +295,7 @@ textarea {
 
 .contact-button {
   /* This works because buttons are display: inline-block by default */
-  text-align: center;
+  float: right;
 }
 
 form button {
@@ -342,7 +351,6 @@ i:hover, button:hover {
     margin-bottom: 1.5rem;
   }
 
-
   .intro-text {
     padding: 2rem 4rem 2rem 4rem;
   }
@@ -381,23 +389,25 @@ i:hover, button:hover {
   }
 
   form {
-    text-align: center;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .form-left {
-    width: 85%;
     padding-right: 0;
-    text-align: left;
     font-weight: bold;
+    width: 100%;
+    text-align: left;
   }
 
   .form-right {
-    width: 85%;
     margin-top: 1.2rem;
+    width: 100%;
   }
 
   .form-item {
     margin: 1rem 0;
+    flex-direction: column;
   }
 }
 
@@ -427,6 +437,11 @@ i:hover, button:hover {
 
   .intro-text {
     padding: 2rem 4rem 2rem 4rem;
+  }
+
+  .intro-text-paragraphs, .about-text {
+    font-size: 2rem;
+    width: 80%;
   }
 
   .pricing-levels {
@@ -463,23 +478,13 @@ i:hover, button:hover {
   }
 
   form {
-    text-align: center;
+    width: 60%;
   }
+}
 
-  .form-left {
-    width: 85%;
-    padding-right: 0;
-    text-align: left;
-    font-weight: bold;
-  }
-
-  .form-right {
-    width: 85%;
-    margin-top: 1.2rem;
-  }
-
-  .form-item {
-    margin: 1rem 0;
+@media (min-width: 1200px) {
+  form {
+    width: 50%;
   }
 }
 
@@ -510,11 +515,16 @@ i:hover, button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .about-text {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+  }
+
+  .banner-text{
+    width: 50%;
+    font-size: 6rem;
   }
 
   h2 {
@@ -526,7 +536,11 @@ i:hover, button:hover {
   }
 
   .pricing-levels {
-    margin: 6rem 0 10rem 0;
+    margin: 6rem 0 14rem 0;
+  }
+
+  form {
+    width: 40%;
   }
 
   form button {
