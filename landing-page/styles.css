@@ -515,11 +515,11 @@ i:hover, button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .about-text {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .banner-text{
