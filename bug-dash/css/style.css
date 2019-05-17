@@ -272,10 +272,16 @@ button:hover {
   }
 }
 
-/* Very large laptops/computers */
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1600px) and (max-width: 1800px) {
   .canvas {
-    padding-top: 8em;
+    padding-top: 7em;
+    margin-left: 40em;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .canvas {
+    padding-top: 8.5em;
     margin-left: 40em;
   }
 }
