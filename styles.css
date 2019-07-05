@@ -446,9 +446,11 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 
   .card:hover {
     /* Increases card size by 1.1x original size */
-    transform: scale(1.1);
+    transform: scale(1.02);
     /* offset y, offset x, blur radius, spread radius */
-    box-shadow: 12px 14px 17px 7px rgba(0, 0, 0, 0.15);
+    box-shadow: 1.5px 2px 13px 1px rgba(0, 0, 0, 0.15);
+    /* ease-in-out effect has a slow start and end */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     z-index: 1;
   }
 }
