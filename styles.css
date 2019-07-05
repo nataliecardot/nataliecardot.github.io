@@ -27,7 +27,7 @@ h1 {
 }
 
 /* Applies to (h2) hero image subtitle */
-.header-subheading {
+.intro-subheading {
   /* Ensures content is not revealed until the animation (hides letters to right of blinking text cursor; otherwise they move in from the right) */
   overflow: hidden;
   /* Typing animation based on CSS-Tricks tutorial https://css-tricks.com/snippets/css/typewriter-effect/ */
@@ -287,7 +287,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 
   /* Applies to hero image subtitle */
-  .header-subheading {
+  .intro-subheading {
     font-size: 16px;
   }
 
@@ -358,7 +358,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 
   /* Applies to (h2) hero image subtitle */
-  .header-subheading {
+  .intro-subheading {
     font-size: 17px;
   }
 
@@ -413,7 +413,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 
   /* Applies to (h2) hero image subtitle */
-  .header-subheading {
+  .intro-subheading {
     font-size: 18px;
   }
 
@@ -466,7 +466,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 
   /* Applies to (h2) hero image subtitle */
-  .header-subheading {
+  .intro-subheading {
     font-size: 20px;
   }
 
