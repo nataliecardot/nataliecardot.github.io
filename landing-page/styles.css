@@ -13,7 +13,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto 45rem auto auto 42rem auto;
+  grid-template-rows: 8rem auto auto 45rem auto auto 42rem auto;
 
   grid-template-areas:
     "header header"
@@ -33,6 +33,7 @@ body {
 header {
   /* Unlike position: fixed, doesn't overlap content that follows header */
   position: sticky;
+  -webkit-position: sticky;
   /* Needed for use of position: sticky; */
   top: 0;
   grid-area: header;
@@ -42,6 +43,20 @@ header {
   align-items: center;
   padding: 0 3.8rem 0 4.3rem;
   max-width: 100vw;
+  /* Keeps header on top at all times; necessary due to fix for anchor link offset caused by fixed header */
+  z-index: 1;
+}
+
+/* These next 2 rulesets, in addition to setting header's z-index to 1 and changing html, are a solution to anchor link offset caused by fixed header */
+
+section {
+  position: relative;
+}
+
+section a {
+  position: absolute;
+  /* 8rem up from top of section (nearly matches height of header set in grid-template-rows, slightly less due to imperfect scroll location for contact link with 8rem) */
+  top: -7.9rem;
 }
 
 .logo {
