@@ -1,7 +1,8 @@
 body {
   /* If a font name contains white space, it must be quoted */
   font-family: "Work Sans";
-  background-color: #754264;
+  background: url("./survey-bg.jpg") center no-repeat fixed;
+  background-size: cover;
 }
 
 /* Tells the browser to account for any border and padding in the values specified for an element's width and height */
@@ -10,7 +11,7 @@ body {
 }
 
 .container {
-  background-color: #d1bdcb;
+  background-color: #f6f6f6;
   margin: 2rem auto;
   border-radius: 4px;
   width: 75%;
