@@ -86,7 +86,7 @@ textarea {
 }
 
 button {
-  background-color: #502e45;
+  background-color: #303030;
   cursor: pointer;
   border-radius: 4px;
   color: white;
@@ -98,8 +98,7 @@ button {
 }
 
 button:hover {
-  background-color: #b51c84;
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 /* Special styling for smartphones */
