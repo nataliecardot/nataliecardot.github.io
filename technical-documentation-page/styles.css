@@ -36,7 +36,7 @@ nav {
   /* Keeps it at top of screen at all times */
   top: 0;
   height: 100vh;
-  background: linear-gradient(#f4f4f4, #cbcbcb);
+  background: #e8e8e8;
 }
 
 h1 {
@@ -46,8 +46,7 @@ h1 {
 }
 
 i {
-  /* color: rgba(95, 176, 199, 1); */
-  color: #eeaa7b;
+  color: rgba(27, 155, 191, 1);
 }
 
 /* Removing top margin of first h2 element in main */
