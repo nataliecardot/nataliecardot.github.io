@@ -62,6 +62,7 @@ h1 {
 
 ul {
   columns: 2;
+  margin-bottom: 2rem;
 }
 
 /* Prevents link color from changing to dark blue on hover (just an underline appears) */
@@ -271,7 +272,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 
 /* MEDIA QUERIES */
 
-/* Special styling for viewports up to 767px wide */
+/* Small screens */
 @media screen and (max-width: 767px) {
   * {
     transform: none;
@@ -346,7 +347,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 }
 
-/* Tablets */
+/* Medium screens/tablets */
 @media screen and (min-width: 768px) and (max-width: 991px) {
   * {
     transform: none;
@@ -406,8 +407,8 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 }
 
-/* Small laptops/medium screens. Point at which Bootstrap columns quit stacking */
-@media screen and (min-width: 992px) {
+/* Large screens */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   p, li {
     font-size: 15px;
   }
@@ -459,7 +460,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 }
 
-/* Regular and large laptops, desktops/large screens */
+/* Extra large screens */
 @media screen and (min-width: 1200px) {
   p, li {
     font-size: 16px;
