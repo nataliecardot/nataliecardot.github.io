@@ -104,6 +104,8 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 .resume-link:hover {
   /* Prevent underline */
   text-decoration: none;
+  color: #343434;
+  transition: 1s;
 }
 
 /* Have to set this because set cursor to default above */
