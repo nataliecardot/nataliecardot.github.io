@@ -6,7 +6,7 @@ body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .nav-link {
