@@ -5,6 +5,8 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .nav-link {
@@ -274,7 +276,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   color: #c2c2c2;
 }
 
-/* MEDIA QUERIES */
+/* ------------ MEDIA QUERIES ------------ */
 
 /* Small screens */
 @media screen and (max-width: 767px) {
@@ -466,6 +468,10 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 
 /* Extra large screens */
 @media screen and (min-width: 1200px) {
+  .about-text p {
+    width: 85%;
+  }
+
   p, li {
     font-size: 16px;
   }
