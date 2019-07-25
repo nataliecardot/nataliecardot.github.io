@@ -27,6 +27,12 @@
     <!-- Google Fonts API provides regular version of requested fonts by default. To request other styles or weights, append a colon (:) to the name of the font, followed by list of styles or weights separated by commas -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:Regular,Medium|Raleway:Medium" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Defer: "The script is fetched asynchronously, and it’s executed only after the HTML parsing is done.
+    Parsing finishes just like when we put the script at the end of the body tag, but overall the script execution finishes well before, because the script has been downloaded in parallel with the HTML parsing." https://flaviocopes.com/javascript-async-defer/ -->
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <!-- navbar-expand-md stacks nav links (accessible within toggler icon) starting at Bootstrap 4's small breakpoint (767px and below). navbar-dark styles nav link text (changes from blue to gray text that becomes a lighter color on hover) -->
@@ -319,11 +325,5 @@
         </div>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin=""></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- Since script tag is at the end of body, $(document).ready() not required in JavaScript sheet. (If it were instead placed in head, it would be needed) -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
   </body>
 </html>
