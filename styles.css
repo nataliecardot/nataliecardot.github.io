@@ -32,12 +32,14 @@ h1 {
 .intro-subheading {
   /* Ensures content is not revealed until the animation (hides letters to right of blinking text cursor; otherwise they move in from the right) */
   overflow: hidden;
+  /* Adds some extra space between text and typewriter cursor */
+  padding-right: 0.10em;
   /* Typing animation based on CSS-Tricks tutorial https://css-tricks.com/snippets/css/typewriter-effect/ */
-  border-right: 0.15em solid #fff; /* Typewriter cursor */
+  border-right: 0.13em solid #fff; /* Typewriter cursor */
   white-space: nowrap; /* Keeps content on single line */
   margin: 0 auto; /* Scrolling effect; centers text as it appears */
   letter-spacing: 0.15em;
-  animation: typing 3.5s steps(40), blink-caret 0.75s steps(1) infinite;
+  animation: typing 3.5s steps(40), blink-caret 1s steps(1) infinite;
 }
 
 /* Typing effect */
