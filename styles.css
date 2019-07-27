@@ -396,6 +396,11 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
     box-shadow: none;
   }
 
+  /* Disable animation */
+  .fa-chevron-down:hover {
+    animation: none;
+  }
+
   p, li {
     font-size: 14px;
   }
