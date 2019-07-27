@@ -149,6 +149,23 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   margin: auto;
 }
 
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
 /* Down arrow on cover */
 .fa-chevron-down {
   margin-bottom: 0.25em;
@@ -156,6 +173,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 
 .fa-chevron-down:hover {
   cursor: pointer;
+  animation: bounce 1s infinite;
 }
 
 .contact, .bg {
