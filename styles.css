@@ -127,7 +127,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   text-decoration: none;
 }
 
-.hero-image {
+.cover {
   background-image: url("img/cafe.jpg");
   /* Sets height to full height (100%) of viewport */
   height: 100vh;
@@ -139,13 +139,23 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   background-attachment: fixed;
   /* Enables flex layout */
   display: flex;
-  /* Vertically aligns (align-items defines how the browser distributes space between and around flex items along cross-axis of container; works like justify-content but in the perpendicular direction) */
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.hero-text {
-  /* Right/left auto margin horizontally centers hero text. Bottom margin effectively vertically centers between bottom of viewport and bottom of navbar */
-  margin: 0 auto 3.9em;
+.cover-text {
+  /* Right/left of auto needed for centering of text of typing animation */
+  /* Vertically centers text (in addition to horizontal centering) since it's a flex item */
+  margin: auto;
+}
+
+/* Down arrow on cover */
+.fa-chevron-down {
+  margin-bottom: 0.25em;
+}
+
+.fa-chevron-down:hover {
+  cursor: pointer;
 }
 
 .contact, .bg {
