@@ -147,6 +147,10 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   /* Right/left of auto needed for centering of text of typing animation */
   /* Vertically centers text (in addition to horizontal centering) since it's a flex item */
   margin: auto;
+  /* Set so `top` property can apply (default is static) */
+  position: relative;
+  /* To offset being pushed up from bottom margin applied to chevron icon, so it's vertically centered */
+  top: 0.25em;
 }
 
 @keyframes bounce {
