@@ -27,10 +27,8 @@
     <!-- Google Fonts API provides regular version of requested fonts by default. To request other styles or weights, append a colon (:) to the name of the font, followed by list of styles or weights separated by commas -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:Regular,Medium|Raleway:Medium" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Defer: "The script is fetched asynchronously, and it’s executed only after the HTML parsing is done.
-    Parsing finishes just like when we put the script at the end of the body tag, but overall the script execution finishes well before, because the script has been downloaded in parallel with the HTML parsing." https://flaviocopes.com/javascript-async-defer/ -->
-    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script defer src="script.js"></script>
   </head>
@@ -66,7 +64,7 @@
                 <h1>Natalie Cardot</h1>
                 <h2 class="intro-subheading">web developer in training</h2>
               </div>
-              <a href="#about">
+              <a class="chevron" href="#about">
                 <i class="fas fa-chevron-down fa-3x text-white"></i>
               </a>
             </div>
@@ -328,5 +326,6 @@
         </div>
       </div>
     </footer>
+
   </body>
 </html>
