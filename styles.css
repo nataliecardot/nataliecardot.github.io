@@ -68,22 +68,19 @@ h1 {
 
 @keyframes fadeInUp {
   from {
-    transform: translate3d(0, 40px, 0)
+    /* x, y axis */
+    transform: translate(0, 80px);
+    opacity: 0;
   }
 
   to {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, 0);
     opacity: 1
   }
 }
 
-.animated {
+.fadeInUpAnimation {
   animation-duration: 1.5s;
-  animation-fill-mode: both;
-}
-
-.fadeInUp {
-  opacity: 0;
   animation-name: fadeInUp;
 }
 
