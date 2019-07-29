@@ -64,6 +64,31 @@ h1 {
   }
 }
 
+/* --------------- Portrait image animation ---------------- */
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+}
+
+/* ------------------------------------------ */
+
 ul {
   columns: 2;
   margin-bottom: 2rem;
@@ -549,13 +574,10 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 
   .portrait {
-    height: 350px;
-  }
-
-  .portrait {
     /* Image is 800 x 800 */
     height: 400px;
-    margin: 5em 0 0 1em;
+    margin: 0 auto;
+    padding-left: 1em;
   }
 
   .coming-soon {
