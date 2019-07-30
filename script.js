@@ -10,3 +10,15 @@ $('.nav-link, .chevron').click((e) => {
     scrollTop: $(sectionId).offset().top - 20
   }, 100);
 });
+
+$(document).on('scroll', function(){
+  const wHeight = window.innerHeight;
+  // As of 2019 scrollY not supported by IE, but pageYOffset is supported by all browsers
+  const yScroll = window.scrollY || window.pageYOffset;
+
+  const elementPosition = $('.portrait').offset().top;
+
+  if (wHeight + yScroll > elementPosition + $('.portrait').height()) {
+    $('.portrait').addClass('fadeInUpAnimation');
+  }
+});

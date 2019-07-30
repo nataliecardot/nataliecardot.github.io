@@ -42,6 +42,17 @@ h1 {
   animation: typing 3.5s steps(40), blink-caret 1s steps(1) infinite;
 }
 
+.portrait {
+  opacity: 0;
+  transform: translate(0, 70px);
+  transition: 1.5s ease-in;
+}
+
+.fadeInUpAnimation {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 /* Typing effect */
 @keyframes typing {
   from {
@@ -63,28 +74,6 @@ h1 {
     border-color: #fff;
   }
 }
-
-/* --------------- Portrait image animation ---------------- */
-
-@keyframes fadeInUp {
-  from {
-    /* x, y axis */
-    transform: translate(0, 80px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translate(0, 0);
-    opacity: 1
-  }
-}
-
-.fadeInUpAnimation {
-  animation-duration: 1.5s;
-  animation-name: fadeInUp;
-}
-
-/* ------------------------------------------ */
 
 ul {
   columns: 2;
