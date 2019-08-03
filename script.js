@@ -19,6 +19,6 @@ $(document).on('scroll', function(){
   const elementPosition = $('.portrait').offset().top;
 
   if (wHeight + yScroll > elementPosition + $('.portrait').height()) {
-    $('.portrait').addClass('fadeInUpAnimation');
+    $('.portrait').addClass('fadeInUp');
   }
 });

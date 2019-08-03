@@ -48,7 +48,7 @@ h1 {
   transition: 1.5s ease-in;
 }
 
-.fadeInUpAnimation {
+.fadeInUp {
   opacity: 1;
   transform: translate(0, 0);
 }
@@ -351,6 +351,8 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   /* Applies to hero image subtitle */
   .intro-subheading {
     font-size: 16px;
+    /* Disables typing effect (two animations) */
+    animation: none;
   }
 
   .section-title {
@@ -394,6 +396,8 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   .portrait {
     height: 250px;
     margin: 15px auto;
+    /* Disables fadeInUp effect */
+    transition: none;
   }
 
   .coming-soon {
@@ -410,11 +414,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   * {
     transform: none;
     box-shadow: none;
-  }
-
-  /* Disable animation */
-  .fa-chevron-down:hover {
-    animation: none;
   }
 
   p, li {
