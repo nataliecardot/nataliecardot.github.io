@@ -335,11 +335,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
     padding: 0.75rem;
   }
 
-  /* Disable animation */
-  .fa-chevron-down:hover {
-    animation: none;
-  }
-
   p, li {
     font-size: 14px;
   }
@@ -351,8 +346,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   /* Applies to hero image subtitle */
   .intro-subheading {
     font-size: 16px;
-    /* Disables typing effect (two animations) */
-    animation: none;
   }
 
   .section-title {
@@ -396,8 +389,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   .portrait {
     height: 250px;
     margin: 15px auto;
-    /* Disables fadeInUp effect */
-    transition: none;
   }
 
   .coming-soon {
