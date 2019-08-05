@@ -390,7 +390,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
     height: 250px;
     margin: 15px auto;
     /* Originally 0, 70px, changing so it slides in from the side. fadeInUp sets to 0, 0 */
-    transform: translate(-100px, 0);
+    transform: translate(-70px, 0);
   }
 
   .coming-soon {
