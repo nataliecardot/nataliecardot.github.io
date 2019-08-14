@@ -44,7 +44,7 @@ h1 {
 
 .portrait {
   opacity: 0;
-  transform: translate(0, 70px);
+  transform: translate(70px, 0);
   transition: 1.5s ease-in;
 }
 
@@ -196,6 +196,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 }
 
 .about-text {
+  margin: 0 auto;
   text-align: left;
 }
 
@@ -522,10 +523,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 
 /* Extra large screens */
 @media screen and (min-width: 1200px) {
-  .about-text p {
-    width: 85%;
-  }
-
   p, li {
     font-size: 16px;
   }
@@ -553,14 +550,15 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 
   .about-text {
-    margin-bottom: 2.4em;
+    width: 60%;
+    margin-bottom: 4em;
   }
 
   .portrait {
     /* Image is 800 x 800 */
     height: 400px;
-    margin: 0 auto;
     padding-left: 1em;
+    margin-bottom: 3em;
   }
 
   .coming-soon {
