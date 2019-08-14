@@ -346,12 +346,12 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 
   h1 {
-    font-size: 33px;
+    font-size: 30px;
   }
 
   /* Applies to hero image subtitle */
   .intro-subheading {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .section-title {
@@ -373,7 +373,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
     font-size: 15px;
     padding: 1.4em;
     margin-bottom: 0;
-    margin-left: 5px;
   }
 
   .about-text .fas {
@@ -502,7 +501,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   .portrait {
     height: 350px;
     margin-top: 7em;
-    margin-left: 14px;
   }
 
   .coming-soon {
@@ -581,5 +579,9 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 
   .about-text {
     width: 50%;
+  }
+
+  .portfolio {
+    padding: 3em 10em 1em 10em;
   }
 }
