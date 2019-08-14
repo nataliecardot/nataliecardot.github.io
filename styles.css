@@ -408,7 +408,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 }
 
-/* Medium screens/tablets */
+/* Tablets */
 @media screen and (min-width: 768px) and (max-width: 991px) {
   * {
     transform: none;
@@ -468,7 +468,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 }
 
-/* Large screens */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   p, li {
     font-size: 15px;
@@ -521,7 +520,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   }
 }
 
-/* Extra large screens */
 @media screen and (min-width: 1200px) {
   p, li {
     font-size: 16px;
@@ -573,5 +571,15 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
     /* ease-in-out effect has a slow start and end */
     transition: 0.5s ease;
     /* z-index: 1; */
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .portrait {
+    height: 500px;
+  }
+
+  .about-text {
+    width: 60%;
   }
 }
