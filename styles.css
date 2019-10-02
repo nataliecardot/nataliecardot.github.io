@@ -200,6 +200,10 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   text-align: left;
 }
 
+.education-text {
+  line-height: 1.9;
+}
+
 .portfolio {
   background-color: #e6e6e6;
 }
