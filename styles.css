@@ -43,9 +43,9 @@ h1 {
 }
 
 .portrait {
-  opacity: 0;
-  transform: translate(70px, 0);
-  transition: 1.5s ease-in;
+  opacity: 0.2;
+  transform: translate(20px, 0);
+  transition: 0.75s ease-in;
 }
 
 .fadeInUp {
