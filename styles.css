@@ -117,6 +117,11 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   cursor: default;
 }
 
+/* Applies to GitHub link */
+a {
+  color: #3A87B3;
+}
+
 .resume-link {
   color: #3A87B3;
 }
@@ -153,7 +158,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* Enables flex layout */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
