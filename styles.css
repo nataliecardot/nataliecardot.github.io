@@ -117,10 +117,14 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   cursor: default;
 }
 
+.resume-link {
+  color: #3A87B3;
+}
+
 .resume-link:hover {
   /* Prevent underline */
   text-decoration: none;
-  color: #343434;
+  opacity: 0.7;
   transition: 1s;
 }
 
@@ -246,11 +250,6 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
   color: #fff;
 }
 
-.fab:hover, a {
-  /* Teal */
-	color: #3A87B3;
-}
-
 .about-text .fas {
   color: #8e8e8e;
   float: right;
@@ -286,7 +285,7 @@ h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
 .email-button:hover {
   text-decoration: none;
   color: #fff;
-  background-color: #343434;
+  opacity: 0.7;
   transition: 1s;
 }
 
