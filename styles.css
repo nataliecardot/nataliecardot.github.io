@@ -149,7 +149,7 @@ a {
 }
 
 .cover {
-  background-image: url("img/bg-pattern.jpg");
+  background-image: url("img/bg.jpg");
   /* Sets height to full height (100%) of viewport */
   height: 100vh;
   /* Ensures background image spans full width of viewport */
