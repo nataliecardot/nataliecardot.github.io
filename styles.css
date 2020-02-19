@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,22 +27,20 @@ body {
 
 /* Applies to full name in hero image */
 h1 {
-  font-family: "Raleway", sans-serif;
-  margin-bottom: 0.7em;
-  letter-spacing: 2px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 0.8em;
+  letter-spacing: 0.12rem;
 }
 
 /* Applies to (h2) hero image subtitle */
 .intro-subheading {
   /* Ensures content is not revealed until the animation (hides letters to right of blinking text cursor; otherwise they move in from the right) */
   overflow: hidden;
-  /* Adds some extra space between text and typewriter cursor */
-  padding-right: 0.10em;
   /* Typing animation based on CSS-Tricks tutorial https://css-tricks.com/snippets/css/typewriter-effect/ */
-  border-right: 0.13em solid #fff; /* Typewriter cursor */
+  border-right: 0.15rem solid #fff; /* Typewriter cursor */
   white-space: nowrap; /* Keeps content on single line */
   margin: 0 auto; /* Scrolling effect; centers text as it appears */
-  letter-spacing: 0.15em;
+  letter-spacing: 0.3rem;
   animation: typing 2.5s steps(40), blink-caret 1s steps(1) infinite;
 }
 
@@ -65,13 +63,14 @@ h1 {
   }
 
   to {
-    width: 100%
+    width: 100%;
   }
 }
 
 /* Text cursor effect */
 @keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
 
@@ -92,7 +91,7 @@ a:hover {
 
 /* Applies to portfolio and contact section titles (h3 headings) */
 .section-title {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   /* Overrides default 0.67em top and bottom margin typically displayed by browsers for h elements */
   margin: 0 0 1em;
@@ -101,7 +100,7 @@ a:hover {
 
 /* Applies to about section title (h3 heading). Needs its own margin settings, so can't use default section-title styling */
 .about-title {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   margin: 1.5em 0 1em 0;
   letter-spacing: 3px;
@@ -109,7 +108,7 @@ a:hover {
 
 /* Applies to (h4) about section subheadings */
 .about-subheader {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2px;
@@ -117,16 +116,25 @@ a:hover {
 }
 
 /* Prevent text cursor from appearing */
-h1, h2, h3, h4.about-subheader, p, .about-text, h4.coming-soon-title, .card p {
+h1,
+h2,
+h3,
+h4.about-subheader,
+p,
+.about-text,
+h4.coming-soon-title,
+.card p {
   cursor: default;
 }
 
 /* Applies to PDF icon/download link and GitHub links */
-a, .resume-link {
+a,
+.resume-link {
   color: var(--link-color);
 }
 
-.resume-link:hover, .resume-link p:hover {
+.resume-link:hover,
+.resume-link p:hover {
   /* Prevent underline */
   text-decoration: none;
   opacity: 0.7;
@@ -149,7 +157,7 @@ a, .resume-link {
 }
 
 .cover {
-  background-image: url("img/bg.jpg");
+  background-image: url('img/bg.jpg');
   /* Sets height to full height (100%) of viewport */
   height: 100vh;
   /* Ensures background image spans full width of viewport */
@@ -179,20 +187,23 @@ a, .resume-link {
 }
 
 @keyframes bounce {
-	0%, 20%, 60%, 100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-	}
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 
-	40% {
-		-webkit-transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 
-	80% {
-		-webkit-transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
 
 /* Down arrow on cover */
@@ -205,7 +216,8 @@ a, .resume-link {
   animation: bounce 1s infinite;
 }
 
-.contact, .bg {
+.contact,
+.bg {
   background-color: WhiteSmoke;
 }
 
@@ -300,7 +312,8 @@ a, .resume-link {
   display: inline;
 }
 
-.navbar-toggler.collapsed > .close, .navbar-toggler:not(.collapsed) > .navbar-toggler-icon {
+.navbar-toggler.collapsed > .close,
+.navbar-toggler:not(.collapsed) > .navbar-toggler-icon {
   display: none;
 }
 
@@ -354,7 +367,8 @@ a, .resume-link {
     animation: none;
   }
 
-  p, li {
+  p,
+  li {
     font-size: 14px;
   }
 
@@ -399,7 +413,7 @@ a, .resume-link {
   }
 
   .portfolio {
-    padding: 2em 0.5em 0 0.5em
+    padding: 2em 0.5em 0 0.5em;
   }
 
   .contact {
@@ -433,7 +447,8 @@ a, .resume-link {
     box-shadow: none;
   }
 
-  p, li {
+  p,
+  li {
     font-size: 14px;
   }
 
@@ -483,7 +498,8 @@ a, .resume-link {
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  p, li {
+  p,
+  li {
     font-size: 15px;
   }
 
@@ -534,7 +550,8 @@ a, .resume-link {
 }
 
 @media screen and (min-width: 1200px) {
-  p, li {
+  p,
+  li {
     font-size: 16px;
   }
 
