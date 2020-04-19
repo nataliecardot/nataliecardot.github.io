@@ -179,6 +179,9 @@ a,
   position: relative;
   /* To offset being pushed up from bottom margin applied to chevron icon, so it's vertically centered */
   top: 0.25em;
+  /* To keep 'typewriter cursor' (right border) to immediate right of text */
+  display: flex;
+  flex-direction: column;
 }
 
 /* 'More projects on GitHub' text */
