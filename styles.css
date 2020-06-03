@@ -1,5 +1,5 @@
 :root {
-  --link-color: #da7374;
+  --link-color: #33691e;
 }
 
 html {
@@ -157,7 +157,7 @@ a,
 }
 
 .cover {
-  background-image: url('img/bg.jpg');
+  background-image: url('img/plant.jpg');
   /* Sets height to full height (100%) of viewport */
   height: 100vh;
   /* Ensures background image spans full width of viewport */
@@ -220,7 +220,11 @@ a,
 
 .contact,
 .bg {
-  background-color: WhiteSmoke;
+  background-color: #f5f5f5;
+}
+
+.bg.about {
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .about-text {
@@ -233,7 +237,7 @@ a,
 }
 
 .portfolio {
-  background-color: #e6e6e6;
+  background-color: #fdfafa;
 }
 
 .portfolio-item {
@@ -249,6 +253,7 @@ a,
 .contact {
   /* Setting right and left padding to 0 so it doesn't decrease width of contact form inputs */
   padding: 3em 0;
+  border-top: 2px solid #e0e0e0;
 }
 
 .footer {
