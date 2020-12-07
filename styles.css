@@ -44,17 +44,12 @@ h1 {
   animation: typing 2.5s steps(40), blink-caret 1s steps(1) infinite;
 }
 
-.portrait {
+/* .portrait {
   opacity: 0.4;
   transform: translate(20px, 0);
   transition: 0.75s ease-in;
   border-radius: 50%;
-}
-
-.fadeInUp {
-  opacity: 1;
-  transform: translate(0, 0);
-}
+} */
 
 /* Typing effect */
 @keyframes typing {
@@ -431,12 +426,11 @@ a,
     padding: 0 2em;
   }
 
-  .portrait {
+  /* .portrait {
     height: 250px;
     margin: 15px auto 18px auto;
-    /* Makes it so it only fades in */
     transform: translate(0, 0);
-  }
+  } */
 
   .coming-soon {
     display: none;
@@ -482,10 +476,10 @@ a,
     margin: 1.5em;
   }
 
-  .portrait {
+  /* .portrait {
     height: 350px;
     margin-bottom: 2em;
-  }
+  } */
 
   .about-text {
     /* margin-bottom: 2em; */
@@ -536,10 +530,10 @@ a,
     width: 94%;
   }
 
-  .portrait {
+  /* .portrait {
     height: 350px;
     margin-top: 7em;
-  }
+  } */
 
   .coming-soon {
     display: inline;
@@ -589,12 +583,11 @@ a,
     margin-bottom: 4em;
   }
 
-  .portrait {
-    /* Image is 800 x 800 */
+  /* .portrait {
     height: 400px;
     padding-left: 1em;
     margin-bottom: 3em;
-  }
+  } */
 
   .coming-soon {
     display: inline;
@@ -612,9 +605,9 @@ a,
 }
 
 @media screen and (min-width: 1600px) {
-  .portrait {
+  /* .portrait {
     height: 500px;
-  }
+  } */
 
   .about-text {
     width: 40%;
