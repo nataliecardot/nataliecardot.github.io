@@ -32,24 +32,24 @@ h1 {
   letter-spacing: 0.12rem;
 }
 
+.cover-subtext {
+  /* Prevents blinking cursor from extending to edge parent div */
+  width: fit-content;
+  margin: 0 auto;
+}
+
 /* Applies to (h2) hero image subtitle */
 .intro-subheading {
   /* Ensures content is not revealed until the animation (hides letters to right of blinking text cursor; otherwise they move in from the right) */
   overflow: hidden;
   /* Typing animation based on CSS-Tricks tutorial https://css-tricks.com/snippets/css/typewriter-effect/ */
-  border-right: 0.15rem solid #fff; /* Typewriter cursor */
+  border-right: 0.15em solid #fff;
   white-space: nowrap; /* Keeps content on single line */
   margin: 0 auto; /* Scrolling effect; centers text as it appears */
-  letter-spacing: 0.3rem;
-  animation: typing 2.5s steps(40), blink-caret 1s steps(1) infinite;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  /* max-width: 80%; */
 }
-
-/* .portrait {
-  opacity: 0.4;
-  transform: translate(20px, 0);
-  transition: 0.75s ease-in;
-  border-radius: 50%;
-} */
 
 /* Typing effect */
 @keyframes typing {
@@ -73,6 +73,13 @@ h1 {
     border-color: #fff;
   }
 }
+
+/* .portrait {
+  opacity: 0.4;
+  transform: translate(20px, 0);
+  transition: 0.75s ease-in;
+  border-radius: 50%;
+} */
 
 ul {
   columns: 2;
@@ -169,13 +176,9 @@ a,
   /* Right/left of auto needed for centering of text of typing animation */
   /* Vertically centers text (in addition to horizontal centering) since it's a flex item */
   margin: auto;
-  /* Set so `top` property can apply (default is static) */
-  position: relative;
-  /* To offset being pushed up from bottom margin applied to chevron icon, so it's vertically centered */
-  top: 0.25em;
   /* To keep 'typewriter cursor' (right border) to immediate right of text */
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  width: fit-content;
 }
 
 /* 'More projects on GitHub' text */
