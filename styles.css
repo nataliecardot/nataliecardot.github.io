@@ -74,12 +74,18 @@ h1 {
   }
 }
 
-/* .portrait {
+.portrait {
+  height: 350px;
   opacity: 0.4;
   transform: translate(20px, 0);
   transition: 0.75s ease-in;
   border-radius: 50%;
-} */
+}
+
+.fadeInUp {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 
 ul {
   columns: 2;
