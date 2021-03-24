@@ -1,540 +1,354 @@
 <!DOCTYPE html>
 <!-- Include to signal multilingual screen reader users to switch to another language if their default is not the one used in the page and for more effective search engine indexing -->
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <!-- Ensures proper rendering and touch zooming -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="img/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <title>Natalie Cardot</title>
-    <!-- A canonical URL is one chosen to act as as main URL. Canonical URLs help search engines consolidate information they have for individual URLs (such as links to them) into a single, authoritative URL -->
-    <link rel="canonical" href="https://nataliecardot.com" />
-    <meta name="description" content="Web development portfolio" />
-    <meta property="og:title" content="Natalie Cardot" />
-    <meta name="author" content="Natalie Cardot" />
-    <!-- Twitter allows substitution of Open Graph tags (Facebook's) for its own -->
-    <meta
-      property="og:description"
-      content="Seattle-based front-end web developer"
-    />
-    <meta property="og:url" content="https://nataliecardot.com" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content="img/og-image-workspace.jpg" />
-    <!-- Integrity attribute instructs browser to check whether file source has been manipulated and if so, to not load code. crossorigin attribute, required when using integrity, lets you configure CORS requests for the element's fetched data. Empty string is treated as anonymous keyword; cross-origin request will be performed, but no credentials will be provided. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#Attributes#Attributes -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
-      integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
-      crossorigin="anonymous"
-    />
-    <!-- Google Fonts API provides regular version of requested fonts by default. To request other styles or weights, append a colon (:) to the name of the font, followed by list of styles or weights separated by commas -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:Regular,Medium|Raleway:Medium"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      defer
-      src="https://www.googletagmanager.com/gtag/js?id=UA-90298022-4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
+<head>
+  <meta charset="utf-8" />
+  <!-- Ensures proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <title>Natalie Cardot</title>
+  <!-- A canonical URL is one chosen to act as as main URL. Canonical URLs help search engines consolidate information they have for individual URLs (such as links to them) into a single, authoritative URL -->
+  <link rel="canonical" href="https://nataliecardot.com" />
+  <meta name="description" content="Web development portfolio" />
+  <meta property="og:title" content="Natalie Cardot" />
+  <meta name="author" content="Natalie Cardot" />
+  <!-- Twitter allows substitution of Open Graph tags (Facebook's) for its own -->
+  <meta property="og:description" content="Seattle-based front-end web developer" />
+  <meta property="og:url" content="https://nataliecardot.com" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="img/og-image-workspace.jpg" />
+  <!-- Integrity attribute instructs browser to check whether file source has been manipulated and if so, to not load code. crossorigin attribute, required when using integrity, lets you configure CORS requests for the element's fetched data. Empty string is treated as anonymous keyword; cross-origin request will be performed, but no credentials will be provided. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#Attributes#Attributes -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+    integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous" />
+  <!-- Google Fonts API provides regular version of requested fonts by default. To request other styles or weights, append a colon (:) to the name of the font, followed by list of styles or weights separated by commas -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:Regular,Medium|Raleway:Medium" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 
-      gtag('config', 'UA-90298022-4');
-    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-90298022-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-    <script
-      defer
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      defer
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <!-- navbar-expand-md stacks nav links (accessible within toggler icon) starting at Bootstrap 4's small breakpoint (767px and below). navbar-dark styles nav link text (changes from blue to gray text that becomes a lighter color on hover) -->
-    <nav
-      class="navbar navbar-expand-md bg-light navbar-light fixed-top d-block d-sm-none"
-    >
-      <!-- Toggler/collapsible button. aria-expanded attribute indicates to screen reader users state of collapsable content. data-target="#links-collapse": data-target attribute is used by Bootstrap with its JS components and contains CSS selector (custom-named ID) that points to HTML element that is to be changed, which in this case is div (below) containing navbar links. See https://getbootstrap.com/docs/3.3/javascript/ -->
-      <button
-        class="navbar-toggler collapsed ml-auto"
-        type="button"
-        data-toggle="collapse"
-        data-target="#links-collapse"
-        aria-controls="navbarsExampleDefault"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="my-1 mx-2 close">x</span>
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- collapse plugin explained: https://getbootstrap.com/docs/3.3/javascript/#collapse -->
-      <div class="collapse navbar-collapse" id="links-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link px-4" href="#about">ABOUT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-4" href="#portfolio">PORTFOLIO</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-4" href="#contact">CONTACT</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <main>
-      <div class="container-fluid">
-        <section class="row">
-          <div class="col px-0">
-            <div class="cover">
-              <div class="cover-text text-white">
-                <h1>Natalie Cardot</h1>
-                <div class="cover-subtext">
-                  <h2 class="intro-subheading">web developer</h2>
-                </div>
+    gtag('config', 'UA-90298022-4');
+  </script>
+
+  <script defer src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- navbar-expand-md stacks nav links (accessible within toggler icon) starting at Bootstrap 4's small breakpoint (767px and below). navbar-dark styles nav link text (changes from blue to gray text that becomes a lighter color on hover) -->
+  <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top d-block d-sm-none">
+    <!-- Toggler/collapsible button. aria-expanded attribute indicates to screen reader users state of collapsable content. data-target="#links-collapse": data-target attribute is used by Bootstrap with its JS components and contains CSS selector (custom-named ID) that points to HTML element that is to be changed, which in this case is div (below) containing navbar links. See https://getbootstrap.com/docs/3.3/javascript/ -->
+    <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#links-collapse"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="my-1 mx-2 close">x</span>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- collapse plugin explained: https://getbootstrap.com/docs/3.3/javascript/#collapse -->
+    <div class="collapse navbar-collapse" id="links-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link px-4" href="#about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4" href="#portfolio">PORTFOLIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4" href="#contact">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class="container-fluid">
+      <section class="row">
+        <div class="col px-0">
+          <div class="cover">
+            <div class="cover-text text-white">
+              <h1>Natalie Cardot</h1>
+              <div class="cover-subtext">
+                <h2 class="intro-subheading">web developer</h2>
               </div>
-              <a class="chevron" href="#about">
-                <i class="fas fa-chevron-down fa-3x text-white"></i>
+            </div>
+            <a class="chevron" href="#about">
+              <i class="fas fa-chevron-down fa-3x text-white"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="row bg">
+          <div class="col">
+            <h3 class="about-title">About</h3>
+          </div>
+        </div>
+        <div class="row bg about">
+          <div class="col">
+            <img src="img/portrait-square.png" alt="Natalie" class="portrait">
+            <div class="about-text">
+              <p class="h2">Hello!</p>
+              <p>
+                I'm an aspiring web developer located in Seattle with
+                extensive knowledge of JavaScript, HTML5, and CSS. I enjoy
+                working in both the front and back end, and have experience
+                building RESTful, full-stack web apps using React, Node.js,
+                Express, and MongoDB. I'm continually building on my skills and knowledge; my latest work can be found
+                on <a href="https://github.com/nataliecardot" target="_blank">GitHub</a>.
+              </p>
+              <h4 class="about-subheader">Education</h4>
+              <p class="education-text">
+                <strong>University of British Columbia</strong> – Vancouver,
+                British Columbia<br />Bachelor of Arts, Geography –
+                Environment and Sustainability, 2015
+              </p>
+              <p class="education-text">
+                <strong>Santa Monica College</strong> – Santa Monica,
+                California<br />Associate of Arts, Liberal Arts – Arts and
+                Humanities, 2011
+              </p>
+              <h4 class="about-subheader">Courses & Certifications</h4>
+              <p class="education-text">
+                <strong>Udemy</strong><br />NodeJS - The Complete Guide (MVC,
+                REST APIs, GraphQL, Deno), 2020 <br />MERN Stack Front to
+                Back: Full-Stack React, Redux & Node.js, 2020
+              </p>
+              <p class="education-text">
+                <strong>freeCodeCamp</strong><br />Front-End Libraries
+                Certification, 2019<br />JavaScript Algorithms and Data
+                Structures Certification, 2019<br />Responsive Web Design
+                Certification, 2019
+              </p>
+              <p class="education-text">
+                <strong>Udacity</strong><br />Front-End Web Developer
+                Nanodegree, 2018
+              </p>
+              <h4 class="about-subheader">Skills Include...</h4>
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Vue.js</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Deno</li>
+                <li>MongoDB & Mongoose</li>
+                <li>SQL & Sequelize</li>
+                <li>MySQL</li>
+                <li>GraphQL</li>
+                <li>Flexbox</li>
+                <li>CSS Grid</li>
+                <li>jQuery</li>
+                <li>Git/GitHub</li>
+                <li>Webpack</li>
+                <li>Gulp</li>
+                <li>TypeScript</li>
+                <li>Bootstrap 4</li>
+                <li>Foundation</li>
+                <li>Sass</li>
+                <li>ARIA</li>
+                <li>AJAX</li>
+                <li>Testing (incl. Mocha & Jest)</li>
+                <li>AWS</li>
+                <li>Templating engines (Pug, Handlebars, EJS)</li>
+                <li>Python</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="row portfolio">
+        <div class="col-sm-12">
+          <h3 class="section-title">Portfolio</h3>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://devconnectonline.herokuapp.com/" target="_blank"><img class="card-img-top"
+                src="img/devconnect.jpg" alt="devConnect preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://devconnectonline.herokuapp.com/" class="text-dark" target="_blank">
+                <h4 class="card-title">devConnect</h4>
               </a>
+              <p>
+                <i class="fas fa-tags"></i> Node.js, Express, MongoDB,
+                Mongoose, React, Redux
+              </p>
             </div>
           </div>
-        </section>
-        <section id="about">
-          <div class="row bg">
-            <div class="col">
-              <h3 class="about-title">About</h3>
-            </div>
-          </div>
-          <div class="row bg about">
-            <div class="col">
-              <img src="img/portrait-square.png" alt="Natalie" class="portrait">
-              <div class="about-text">
-                <p class="h2">Hello!</p>
-                <p>
-                  I'm an aspiring web developer located in Seattle with
-                  extensive knowledge of JavaScript, HTML5, and CSS. I enjoy
-                  working in both the front and back end, and have experience
-                  building RESTful, full-stack web apps using React, Node.js,
-                  Express, and MongoDB. I'm continually building on my skills and knowledge; my latest work can be found on <a href="https://github.com/nataliecardot" target="_blank">GitHub</a>.
-                </p>
-                <h4 class="about-subheader">Education</h4>
-                <p class="education-text">
-                  <strong>University of British Columbia</strong> – Vancouver,
-                  British Columbia<br />Bachelor of Arts, Geography –
-                  Environment and Sustainability, 2015
-                </p>
-                <p class="education-text">
-                  <strong>Santa Monica College</strong> – Santa Monica,
-                  California<br />Associate of Arts, Liberal Arts – Arts and
-                  Humanities, 2011
-                </p>
-                <h4 class="about-subheader">Courses & Certifications</h4>
-                <p class="education-text">
-                  <strong>Udemy</strong><br />NodeJS - The Complete Guide (MVC,
-                  REST APIs, GraphQL, Deno), 2020 <br />MERN Stack Front to
-                  Back: Full-Stack React, Redux & Node.js, 2020
-                </p>
-                <p class="education-text">
-                  <strong>freeCodeCamp</strong><br />Front-End Libraries
-                  Certification, 2019<br />JavaScript Algorithms and Data
-                  Structures Certification, 2019<br />Responsive Web Design
-                  Certification, 2019
-                </p>
-                <p class="education-text">
-                  <strong>Udacity</strong><br />Front-End Web Developer
-                  Nanodegree, 2018
-                </p>
-                <h4 class="about-subheader">Skills Include...</h4>
-                <ul>
-                  <li>JavaScript</li>
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>React</li>
-                  <li>Redux</li>
-                  <li>Vue.js</li>
-                  <li>Node.js</li>
-                  <li>Express</li>
-                  <li>Deno</li>
-                  <li>MongoDB & Mongoose</li>
-                  <li>SQL & Sequelize</li>
-                  <li>MySQL</li>
-                  <li>GraphQL</li>
-                  <li>Flexbox</li>
-                  <li>CSS Grid</li>
-                  <li>jQuery</li>
-                  <li>Git/GitHub</li>
-                  <li>Webpack</li>
-                  <li>Gulp</li>
-                  <li>TypeScript</li>
-                  <li>Bootstrap 4</li>
-                  <li>Foundation</li>
-                  <li>Sass</li>
-                  <li>ARIA</li>
-                  <li>AJAX</li>
-                  <li>Testing (incl. Mocha & Jest)</li>
-                  <li>AWS</li>
-                  <li>Templating engines (Pug, Handlebars, EJS)</li>
-                  <li>Python</li>
-                  <li>PHP</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="portfolio" class="row portfolio">
-          <div class="col-sm-12">
-            <h3 class="section-title">Portfolio</h3>
-          </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://devconnectonline.herokuapp.com/" target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/devconnect.jpg"
-                  alt="devConnect preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://devconnectonline.herokuapp.com/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">devConnect</h4></a
-                >
-                <p>
-                  <i class="fas fa-tags"></i> Node.js, Express, MongoDB,
-                  Mongoose, React, Redux
-                </p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://fancysnaps.herokuapp.com/" target="_blank"><img class="card-img-top"
+                src="img/fancy-snaps.jpg" alt="Fancy Snaps preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://fancysnaps.herokuapp.com/" class="text-dark" target="_blank">
+                <h4 class="card-title">Fancy Snaps</h4>
+              </a>
+              <p><i class="fas fa-tags"></i> Node.js, Express, React</p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://fancysnaps.herokuapp.com/" target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/fancy-snaps.jpg"
-                  alt="Fancy Snaps preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://fancysnaps.herokuapp.com/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Fancy Snaps</h4></a
-                >
-                <p><i class="fas fa-tags"></i> Node.js, Express, React</p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://suess.herokuapp.com/" target="_blank"><img class="card-img-top" src="img/suess.jpg"
+                alt="süß preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://suess.herokuapp.com/" class="text-dark" target="_blank">
+                <h4 class="card-title">süß</h4>
+              </a>
+              <p>
+                <i class="fas fa-tags"></i> Node.js, Express, MongoDB,
+                Mongoose, AWS S3
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://suess.herokuapp.com/" target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/suess.jpg"
-                  alt="süß preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://suess.herokuapp.com/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">süß</h4></a
-                >
-                <p>
-                  <i class="fas fa-tags"></i> Node.js, Express, MongoDB,
-                  Mongoose, AWS S3
-                </p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://nataliecardot.com/random-quote-machine/" target="_blank"><img class="card-img-top"
+                src="img/random-quote-machine.jpg" alt="Random quote machine preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://nataliecardot.com/random-quote-machine/" class="text-dark" target="_blank">
+                <h4 class="card-title">Random Quote Machine</h4>
+              </a>
+              <p>
+                <i class="fas fa-tags"></i> React, React Hooks, Material-UI
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a
-                href="https://nataliecardot.com/random-quote-machine/"
-                target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/random-quote-machine.jpg"
-                  alt="Random quote machine preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/random-quote-machine/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Random Quote Machine</h4></a
-                >
-                <p>
-                  <i class="fas fa-tags"></i> React, React Hooks, Material-UI
-                </p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://nataliecardot.com/beat-machine/" target="_blank"><img class="card-img-top"
+                src="img/beat-machine.jpg" alt="Beat Machine app preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://nataliecardot.com/beat-machine/" class="text-dark" target="_blank">
+                <h4 class="card-title">Beat Machine</h4>
+              </a>
+              <p>
+                <i class="fas fa-tags"></i> React, React Hooks, CSS Grid,
+                Flexbox
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://nataliecardot.com/beat-machine/" target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/beat-machine.jpg"
-                  alt="Beat Machine app preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/beat-machine/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Beat Machine</h4></a
-                >
-                <p>
-                  <i class="fas fa-tags"></i> React, React Hooks, CSS Grid,
-                  Flexbox
-                </p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://nataliecardot.com/memory-game/" target="_blank"><img class="card-img-top"
+                src="img/memory-game.jpg" alt="Memory game preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://nataliecardot.com/memory-game/" class="text-dark" target="_blank">
+                <h4 class="card-title">Memory Game</h4>
+              </a>
+              <p><i class="fas fa-tags"></i> JavaScript</p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://nataliecardot.com/memory-game/" target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/memory-game.jpg"
-                  alt="Memory game preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/memory-game/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Memory Game</h4></a
-                >
-                <p><i class="fas fa-tags"></i> JavaScript</p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://nataliecardot.com/dad-jokes/" target="_blank"><img class="card-img-top"
+                src="img/dad-jokes.jpg" alt="Dad jokes app preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://nataliecardot.com/dad-jokes/" class="text-dark" target="_blank">
+                <h4 class="card-title">Dad Jokes</h4>
+              </a>
+              <p><i class="fas fa-tags"></i> React</p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://nataliecardot.com/dad-jokes/" target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/dad-jokes.jpg"
-                  alt="Dad jokes app preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/dad-jokes/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Dad Jokes</h4></a
-                >
-                <p><i class="fas fa-tags"></i> React</p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://nataliecardot.com/music-player/" target="_blank"><img class="card-img-top"
+                src="img/music-player.jpg" alt="Music player preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://nataliecardot.com/music-player/" class="text-dark" target="_blank">
+                <h4 class="card-title">Music Player</h4>
+              </a>
+              <p><i class="fas fa-tags"></i> JavaScript</p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a
-                href="https://nataliecardot.com/zeus-hosting/index.html"
-                target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/zeus-hosting.jpg"
-                  alt="ZEUS Hosting preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/zeus-hosting/index.html"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">ZEUS Hosting</h4></a
-                >
-                <p><i class="fas fa-tags"></i> Foundation 6, Sass</p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://nataliecardot.com/pomodoro-timer/" target="_blank"><img class="card-img-top"
+                src="img/pomodoro-timer.jpg" alt="Pomodoro Timer preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://nataliecardot.com/pomodoro-timer/" class="text-dark" target="_blank">
+                <h4 class="card-title">Pomodoro Timer</h4>
+              </a>
+              <p><i class="fas fa-tags"></i> React</p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a
-                href="https://nataliecardot.com/pomodoro-timer/"
-                target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/pomodoro-timer.jpg"
-                  alt="Pomodoro Timer preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/pomodoro-timer/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Pomodoro Timer</h4></a
-                >
-                <p><i class="fas fa-tags"></i> React</p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://nataliecardot.com/seattle-scoops/" target="_blank"><img class="card-img-top"
+                src="img/seattle-scoops.jpg" alt="Seattle Scoops preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://nataliecardot.com/seattle-scoops/" class="text-dark" target="_blank">
+                <h4 class="card-title">Seattle Scoops</h4>
+              </a>
+              <p>
+                <i class="fas fa-tags"></i> React, Foursquare API, Google Maps
+                API
+              </p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a
-                href="https://nataliecardot.com/seattle-scoops/"
-                target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/seattle-scoops.jpg"
-                  alt="Seattle Scoops preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/seattle-scoops/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Seattle Scoops</h4></a
-                >
-                <p>
-                  <i class="fas fa-tags"></i> React, Foursquare API, Google Maps
-                  API
-                </p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://nataliecardot.com/zeus-hosting/index.html" target="_blank"><img class="card-img-top"
+                src="img/zeus-hosting.jpg" alt="ZEUS Hosting preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://nataliecardot.com/zeus-hosting/index.html" class="text-dark" target="_blank">
+                <h4 class="card-title">ZEUS Hosting</h4>
+              </a>
+              <p><i class="fas fa-tags"></i> Foundation 6, Sass</p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://nataliecardot.com/music-player/" target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/music-player.jpg"
-                  alt="Music player preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/music-player/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Music Player</h4></a
-                >
-                <p><i class="fas fa-tags"></i> JavaScript</p>
-              </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://nataliecardot.com/react-calc/" target="_blank"><img class="card-img-top"
+                src="img/react-calc.jpg" alt="React Calculator preview" /></a>
+            <div class="card-body d-flex flex-column">
+              <a href="https://nataliecardot.com/react-calc/" class="text-dark" target="_blank">
+                <h4 class="card-title">React Calculator</h4>
+              </a>
+              <p><i class="fas fa-tags"></i> React, Flexbox</p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://nataliecardot.com/react-calc/" target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/react-calc.jpg"
-                  alt="React Calculator preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/react-calc/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">React Calculator</h4></a
-                >
-                <p><i class="fas fa-tags"></i> React, Flexbox</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://nataliecardot.com/hangman/" target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/hangman.jpg"
-                  alt="Hangman app preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/hangman/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Hangman</h4></a
-                >
-                <p><i class="fas fa-tags"></i> JavaScript</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a
-                href="https://nataliecardot.com/expense-tracker/"
-                target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/expense-tracker.jpg"
-                  alt="Expense tracker app preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/expense-tracker/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Expense Tracker</h4></a
-                >
-                <p><i class="fas fa-tags"></i> JavaScript</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a
-                href="https://nataliecardot.com/pixel-art-maker/"
-                target="_blank"
-                ><img
-                  class="card-img-top"
-                  src="img/pixel-art-maker.jpg"
-                  alt="Pixel Art Maker app preview"
-              /></a>
-              <div class="card-body d-flex flex-column">
-                <a
-                  href="https://nataliecardot.com/pixel-art-maker/"
-                  class="text-dark"
-                  target="_blank"
-                  ><h4 class="card-title">Pixel Art Maker</h4></a
-                >
-                <p><i class="fas fa-tags"></i> JavaScript</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="col-lg-4 col-sm-6 portfolio-item coming-soon">
+        <!-- <div class="col-lg-4 col-sm-6 portfolio-item coming-soon">
             <div class="card h-100">
               <img class="card-img-top" src="img/coming-soon.jpg" alt="Coming soon">
               <div class="card-body d-flex flex-column">
@@ -544,45 +358,36 @@
             </div>
           </div> -->
 
-          <p class="lead mt-4 my-5 mx-auto">
-            <a href="https://github.com/nataliecardot" target="_blank">See more on
-            GitHub <i class="fas fa-arrow-right"></i></a
-            >
-          </p>
+        <p class="lead mt-4 my-5 mx-auto">
+          <a href="https://github.com/nataliecardot" target="_blank">See more on
+            GitHub <i class="fas fa-arrow-right"></i></a>
+        </p>
 
-          <!-- To add images: From full screen with F11, Ctrl + PrtScrn, paste into Pixlr (https://pixlr.com/x/), save as jpg and resize to 700 x 400, place in img folder of site repo folder -->
-        </section>
+        <!-- To add images: From full screen with F11, Ctrl + PrtScrn, paste into Pixlr (https://pixlr.com/x/), save as jpg and resize to 700 x 400, place in img folder of site repo folder -->
+      </section>
 
-        <section id="contact" class="row contact bg">
-          <div class="col">
-            <h3 class="section-title">Contact</h3>
-            <p>Have a question or want to work together?</p>
-            <p><i class="far fa-envelope"></i> nataliecardot@gmail.com</p>
-            <a
-              class="email-button"
-              href="mailto:nataliecardot@gmail.com?subject=Hello"
-              >Email Me</a
-            >
-          </div>
-        </section>
-      </div>
-      <!-- End of container-fluid -->
-    </main>
-
-    <footer>
-      <div class="footer bg-dark">
-        <div class="container">
-          <a href="https://www.freecodecamp.org/nataliecardot" target="_blank"
-            ><i class="fab fa-free-code-camp fa-2x"></i
-          ></a>
-          <a href="https://github.com/nataliecardot" target="_blank"
-            ><i class="fab fa-github fa-2x"></i
-          ></a>
-          <a href="https://medium.com/@nataliecardot" target="_blank"
-            ><i class="fab fa-medium fa-2x"></i
-          ></a>
+      <section id="contact" class="row contact bg">
+        <div class="col">
+          <h3 class="section-title">Contact</h3>
+          <p>Have a question or want to work together?</p>
+          <p><i class="far fa-envelope"></i> nataliecardot@gmail.com</p>
+          <a class="email-button" href="mailto:nataliecardot@gmail.com?subject=Hello">Email Me</a>
         </div>
+      </section>
+    </div>
+    <!-- End of container-fluid -->
+  </main>
+
+  <footer>
+    <div class="footer bg-dark">
+      <div class="container">
+        <a href="https://www.freecodecamp.org/nataliecardot" target="_blank"><i
+            class="fab fa-free-code-camp fa-2x"></i></a>
+        <a href="https://github.com/nataliecardot" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://medium.com/@nataliecardot" target="_blank"><i class="fab fa-medium fa-2x"></i></a>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
