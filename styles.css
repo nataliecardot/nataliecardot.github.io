@@ -448,6 +448,10 @@ a,
   .email-button {
     font-size: 1.2rem;
   }
+
+  .fab {
+    font-size: 1.5rem;
+  }
 }
 
 /* Tablets */
