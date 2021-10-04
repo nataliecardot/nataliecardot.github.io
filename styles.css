@@ -380,7 +380,7 @@ a,
 
   p,
   li {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   /* 'More projects on GitHub' text */
@@ -395,7 +395,7 @@ a,
 
   /* Applies to hero image subtitle */
   .intro-subheading {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .section-title {
@@ -410,11 +410,10 @@ a,
 
   /* Applies to (h4) about section subheadings */
   .about-subheader {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .about-text {
-    font-size: 15px;
     padding: 0.5em;
     margin-bottom: 0;
   }
@@ -521,11 +520,6 @@ a,
     font-size: 38px;
   }
 
-  /* Applies to (h2) hero image subtitle */
-  .intro-subheading {
-    font-size: 18px;
-  }
-
   .section-title {
     font-size: 29px;
   }
@@ -564,11 +558,6 @@ a,
 }
 
 @media screen and (min-width: 1200px) {
-  p,
-  li {
-    font-size: 16px;
-  }
-
   h1 {
     font-size: 50px;
   }
