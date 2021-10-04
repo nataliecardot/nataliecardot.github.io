@@ -488,11 +488,6 @@ a,
     margin: 1.5em;
   }
 
-  /* .portrait {
-    height: 350px;
-    margin-bottom: 2em;
-  } */
-
   .about-text {
     /* margin-bottom: 2em; */
     width: 75%;
@@ -537,11 +532,6 @@ a,
     width: 94%;
   }
 
-  /* .portrait {
-    height: 350px;
-    margin-top: 7em;
-  } */
-
   .coming-soon {
     display: inline;
   }
@@ -585,12 +575,6 @@ a,
     margin-bottom: 4em;
   }
 
-  /* .portrait {
-    height: 400px;
-    padding-left: 1em;
-    margin-bottom: 3em;
-  } */
-
   .coming-soon {
     display: inline;
   }
@@ -607,10 +591,6 @@ a,
 }
 
 @media screen and (min-width: 1600px) {
-  /* .portrait {
-    height: 500px;
-  } */
-
   .about-text {
     width: 40%;
   }
